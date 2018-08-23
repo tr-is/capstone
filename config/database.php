@@ -41,11 +41,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'db4free.net'),
+            'host' => env('DB_HOST', 'us-cdbr-iron-east-01.cleardb.net'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'kewaljobcapstone'),
-            'username' => env('DB_USERNAME', 'kewalcapstone'),
-            'password' => env('DB_PASSWORD', 'way2kewal'),
+            'database' => env('DB_DATABASE', 'heroku_15722824e73ad6a'),
+            'username' => env('DB_USERNAME', 'b64677c539200b'),
+            'password' => env('DB_PASSWORD', 'ef139203'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
