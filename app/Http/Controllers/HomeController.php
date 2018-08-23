@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Job;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     /**
-     * Create a new controller instance.
-     *
-     * @return void
+     * HomeController constructor.
      */
     public function __construct()
     {
@@ -23,6 +22,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $jobs = Job::take(10)->get();
+        return view('home', compact('jobs'));
+    }
+
+    public function jobDetail($id){
+        $job = Job::findOrFail($id);
+        if(! $job instanceof Job){
+            return redirect()->route('home');
+        }
+        return view('user.job-detail',compact('job'));
     }
 }

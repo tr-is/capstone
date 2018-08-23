@@ -1,23 +1,35 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+    <section class="jobs-category-section" style="height: 100vh;">
+        <div class="container">
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">Available jobs</div>
+
+                        <div class="card-body">
+                            @if (session('status'))
+                                <div class="alert alert-success" role="alert">
+                                    {{ session('status') }}
+                                </div>
+                            @endif
+
+                            @if($jobs)
+                                <ul class="list-group">
+                                    @foreach($jobs as $job)
+                                        <li class="list-group-item">{{ $job->title }}</li>
+                                    @endforeach
+                                </ul>
+                            @endif
+
                         </div>
-                    @endif
-
-                    You are logged in!
+                    </div>
                 </div>
             </div>
+
         </div>
-    </div>
-</div>
+    </section>
+
 @endsection
