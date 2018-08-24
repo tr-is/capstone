@@ -7,8 +7,8 @@
 <!---body-->
     <style>
         html, body {
-            background-color: #D6EAF8;
-            color: #21618c;
+            background-color: #fff;
+            color: #D6EAF8;
             font-family: 'Raleway', sans-serif;
             font-weight: 100;
             height: 100vh;
