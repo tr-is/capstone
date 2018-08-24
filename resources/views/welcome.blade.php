@@ -4,17 +4,19 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
-    <!-- Styles -->
+<!---body-->
     <style>
         html, body {
-            background-color: #fff;
+            background-color: #D6EAF8;
             color: #636b6f;
             font-family: 'Raleway', sans-serif;
             font-weight: 100;
             height: 100vh;
             margin: 0;
         }
-
+        .position-ref {
+            position: relative;
+        }
         .full-height {
             height: 100vh;
         }
@@ -23,20 +25,6 @@
             align-items: center;
             display: flex;
             justify-content: center;
-        }
-
-        .position-ref {
-            position: relative;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
-
-        .content {
-            text-align: center;
         }
 
         .title {
@@ -52,6 +40,16 @@
             text-decoration: none;
             text-transform: uppercase;
         }
+        .top-right {
+            position: absolute;
+            right: 10px;
+            top: 18px;
+        }
+
+        .content {
+            text-align: center;
+        }
+
 
         .m-b-md {
             margin-bottom: 30px;
@@ -74,7 +72,7 @@
 
         <div class="content">
             <div class="title m-b-md">
-                Welcome to Our job portal.
+              <p>  Welcome to Our job portal.</p>
             </div>
 
             <div class="links">
