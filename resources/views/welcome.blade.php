@@ -8,7 +8,7 @@
     <style>
         html, body {
             background-color: #D6EAF8;
-            color: #636b6f;
+            color: #21618c;
             font-family: 'Raleway', sans-serif;
             font-weight: 100;
             height: 100vh;
