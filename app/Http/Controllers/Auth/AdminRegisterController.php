@@ -21,8 +21,7 @@ class AdminRegisterController extends Controller
         $this->validator($request->all())->validate();
         $admin = $this->create($request->all());
         $this->guard()->login($admin);
-        return $this->registered($request, $admin)
-            ?: redirect('/admin');
+        return $this->registered($request, $admin) ? redirect('/employer') : redirect('/employer/login');
     }
 
     protected function validator(array $data)
@@ -49,7 +48,10 @@ class AdminRegisterController extends Controller
 
     protected function registered(Request $request, $admin)
     {
-        //
+        if($admin){
+            return true;
+        }
+        return false;
     }
 
 }
