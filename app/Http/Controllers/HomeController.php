@@ -20,6 +20,7 @@ class HomeController extends Controller
     }
 
     public function jobDetail($id){
+        dd("wtfish");
         $job = Job::findOrFail($id);
         if(! $job instanceof Job){
             return redirect()->route('home');
