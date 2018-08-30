@@ -4,26 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Job;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use Symfony\Component\HttpFoundation\Response;
 
 class HomeController extends Controller
 {
-    /**
-     * HomeController constructor.
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        $jobs = Job::take(10)->get();
-        return view('home', compact('jobs'));
+    public function index(Request $request){
+        $query = trim($request->query('query'));
+        if(!empty($query)){
+            $jobs = Job::where('title','like',"%{$query}%")->take(10)->get();
+        }   else    {
+            $jobs = Job::take(10)->get();
+        }
+        return view('welcome', compact('jobs'));
     }
 
     public function jobDetail($id){
