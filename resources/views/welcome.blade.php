@@ -1,82 +1,56 @@
-@extends('layouts.frontend')
+@extends('layouts.app')
 
 @section('styles')
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
-<!---body-->
+    <!-- Styles -->
     <style>
         html, body {
             background-color: #fff;
-            color: #D6EAF8;
+            color: #636b6f;
             font-family: 'Raleway', sans-serif;
             font-weight: 100;
             height: 100vh;
             margin: 0;
         }
-        .position-ref {
-            position: relative;
-        }
-        .full-height {
-            height: 100vh;
-        }
-
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .title {
-            font-size: 84px;
-        }
-
-        .links > a {
-            color: #636b6f;
-            padding: 0 25px;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
-
-        .content {
-            text-align: center;
-        }
-
-
-        .m-b-md {
-            margin-bottom: 30px;
-        }
     </style>
 @endsection
 
 @section('content')
-    <div class="landing-content" style="height: 90vh; margin-top: 100px;">
-        @if (Route::has('login'))
-            <div class="top-right links">
-                @auth
-                    <a href="{{ url('/home') }}">Home</a>
-                @else
-                    <a href="{{ route('login') }}">Login</a>
-                    <a href="{{ route('register') }}">Register</a>
-                @endauth
-            </div>
-        @endif
-
-        <div class="content">
-            <div class="title m-b-md">
-              <p>  Welcome to Our job portal.</p>
-            </div>
-
-            <div class="links">
-                <a href="#">Please login or register to continue.</a>
+    <div class="container">
+        <div class="search-block">
+            <form>
+                <div class="input-group mb-3 col-6 offset-3">
+                    <input type="text"
+                           name="query"
+                           class="form-control"
+                           placeholder="Search text"
+                           value="{{ request('query') }}"
+                           aria-label="Recipient's username"
+                           aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <hr>
+        <div class="jobs-list-block">
+            <div class="mb-3 col-6 offset-3">
+                <div class="card">
+                    <div class="card-header text-center">Job List</div>
+                    <ul class="list-group list-group-flush">
+                        @foreach($jobs as $job)
+                            <li class="list-group-item">
+                                <span class="float-left">{{ $job->title }}</span>
+                                <span class="float-right">
+                                    <a href="{{ route('job.detail.frontend',['slug' => $job->slug]) }}">View</a>
+                                </span>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
