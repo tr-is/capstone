@@ -19,9 +19,9 @@ class HomeController extends Controller
         return view('welcome', compact('jobs'));
     }
 
-    public function jobDetail($id){
-        $job = Job::find($id);
-        dd($job);
+    public function jobDetail($slug){
+        dd($slug);
+        $job = Job::find($slug);
         if(! $job instanceof Job){
             return redirect()->route('home');
         }
