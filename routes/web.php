@@ -19,6 +19,7 @@ Route::get('/', 'HomeController@index');
 Auth::routes();
 
 Route::get('/home', 'UserController@home')->name('home');
+Route::get('/test',function(){return 'abc'});
 Route::get('/job/{slug}/detail', 'HomeController@jobDetail')->name('job.detail.frontend');
 
 Route::prefix('employer')->group(function() {
