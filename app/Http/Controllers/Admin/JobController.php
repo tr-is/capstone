@@ -10,8 +10,16 @@ use App\Http\Controllers\AdminController;
 
 class JobController extends AdminController
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
+
     public function listJobs(Request $request){
+        $userId = Auth::user()->id;
         $filters = $request->query->all();
+        $filters['created_by'] = $userId;
         $limit = isset($filters['limit']) && is_numeric($filters['numeric']) ? $filters['limit'] : 20;
         $data['jobs'] = Job::where($filters)->paginate($limit);
         return view('admin.jobs.list', $data);
