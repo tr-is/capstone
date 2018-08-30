@@ -14,13 +14,11 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'UserController@home')->name('home');
 Route::prefix('employer')->group(function() {
     Route::get('/register', 'Auth\AdminRegisterController@showRegistrationForm')->name('admin.register.form');
     Route::post('/register', 'Auth\AdminRegisterController@register')->name('admin.register');
