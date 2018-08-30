@@ -19,13 +19,22 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <style>
+        .popup-content{
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    </style>
+
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'Capstone') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -42,11 +51,27 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a href="#" class="nav-link" data-toggle="modal" data-target="#loginModal">
+                                    Login
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a href="#" class="nav-link" data-toggle="modal" data-target="#registerModal">
+                                    Register
+                                </a>
                             </li>
+                            {{--<li class="nav-item">--}}
+                                {{--<a class="nav-link" href="{{ route('login') }}">{{ __('Job Seeker Login') }}</a>--}}
+                            {{--</li>--}}
+                            {{--<li class="nav-item">--}}
+                                {{--<a class="nav-link" href="{{ route('register') }}">{{ __('Job Seeker Register') }}</a>--}}
+                            {{--</li>--}}
+                            {{--<li class="nav-item">--}}
+                                {{--<a class="nav-link" href="{{ route('admin.login') }}">{{ __('Employer Login') }}</a>--}}
+                            {{--</li>--}}
+                            {{--<li class="nav-item">--}}
+                                {{--<a class="nav-link" href="{{ route('admin.register.form') }}">{{ __('Employer Register') }}</a>--}}
+                            {{--</li>--}}
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -58,7 +83,7 @@
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
-                                    </a>
+                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
@@ -75,5 +100,6 @@
             @yield('content')
         </main>
     </div>
+    @include('partials.frontend.modals')
 </body>
 </html>
