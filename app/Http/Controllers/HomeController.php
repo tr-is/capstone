@@ -20,7 +20,7 @@ class HomeController extends Controller
     }
 
     public function jobDetail($slug){
-        $job = Job::findOrFail($slug);
+        $job = Job::where(['slug' => $slug])->get()->first();
         if(! $job instanceof Job){
             return redirect()->route('home');
         }
