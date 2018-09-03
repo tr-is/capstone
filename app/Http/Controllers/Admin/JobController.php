@@ -93,6 +93,7 @@ class JobController extends AdminController
                 'output' => doubleval(shell_exec($command))
             ];
         }
+        arsort($results);
         return view('admin.jobs.matchJobs', compact('results','job'));
     }
 
