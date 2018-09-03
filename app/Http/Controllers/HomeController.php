@@ -28,7 +28,8 @@ class HomeController extends Controller
         }
         return view('job-detail',compact('job'));
     }
-}
+
 public function userDetail(User $user){
         return view('user-detail', compact('user'));
     }
+}
