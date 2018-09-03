@@ -32,8 +32,8 @@ def get_result(content_a, content_b):
     vector2 = text_to_vector(text2)
 
     cosine_result = get_cosine(vector1, vector2)
-    return cosine_result
+    return cosine_result * 100
 #will be passing job title and job seeker categories of interest and calculate if it matches or not
 # print get_result('I love github', 'Who love github')
 
-print(get_result(sys.argv[1], sys.argv[2]))
+print("%.5s%s"%(get_result(sys.argv[1], sys.argv[2]),"%"))
