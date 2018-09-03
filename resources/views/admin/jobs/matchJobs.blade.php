@@ -26,7 +26,13 @@
                         @foreach($results as $v)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $v['user'] ? $v['user']->name : ''}}</td>
+                                <td>
+                                    @if($v['user'])
+                                        <a href="{{ route('user.detail.frontend',['user' => $v['user']->id]) }}">
+                                            {{ $v['user']->name }}
+                                        </a>
+                                    @endif
+                                </td>
                                 <td>{{ $v['output'] }}</td>
                             </tr>
                         @endforeach
