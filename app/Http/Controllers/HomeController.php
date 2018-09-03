@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Job;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Symfony\Component\HttpFoundation\Response;
@@ -25,6 +26,9 @@ class HomeController extends Controller
         if(! $job instanceof Job){
             return redirect()->route('home');
         }
-        return view('user.job-detail',compact('job'));
+        return view('job-detail',compact('job'));
     }
 }
+public function userDetail(User $user){
+        return view('user-detail', compact('user'));
+    }
