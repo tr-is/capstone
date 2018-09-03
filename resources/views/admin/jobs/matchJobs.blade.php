@@ -28,8 +28,8 @@
                                 <td>{{ $loop->iteration }}</td>
                                 <td>
                                     @if($v['user'])
-                                        <a href="{{ route('user.detail.frontend',['user' => $v['user']->id]) }}">
-                                            {{ $v['user']->name }} target="_blank"
+                                        <a href="{{ route('user.detail.frontend',['user' => $v['user']->id]) }}" target="_blank">
+                                            {{ $v['user']->name }} 
                                         </a>
                                     @endif
                                 </td>
