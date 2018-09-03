@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/', 'HomeController@index');
+Route::get('/user/{user}/detail', 'HomeController@userDetail')->name('user.detail.frontend');
 
 Auth::routes();
 
