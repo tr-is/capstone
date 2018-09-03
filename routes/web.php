@@ -19,10 +19,7 @@ Route::get('/', 'HomeController@index');
 Auth::routes();
 
 Route::get('/home', 'UserController@home')->name('home');
-Route::get('foo', function () {
-    return 'Hello World';
-});
-Route::get('job/{slug}/detail', 'HomeController@jobDetail')->name('job.detail.frontend');
+Route::get('/job/{slug}/detail', 'HomeController@jobDetail')->name('job.detail.frontend');
 
 Route::prefix('employer')->group(function() {
     Route::get('/register', 'Auth\AdminRegisterController@showRegistrationForm')->name('admin.register.form');
@@ -39,4 +36,9 @@ Route::prefix('employer')->group(function() {
     Route::any('/job/create', 'Admin\JobController@create')->name('admin.job.create');
     Route::any('/job/{id}/update', 'Admin\JobController@create')->name('admin.job.update');
     Route::any('/job/{id}/delete', 'Admin\JobController@delete')->name('admin.job.delete');
+
+    /**
+     * Admin Job matching route
+     */
+    Route::get('/job/{job}/match', 'Admin\JobController@matchJob')->name('admin.job.match');
 });
