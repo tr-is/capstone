@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Job;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -16,7 +17,8 @@ class JobController extends AdminController
         $this->middleware('auth:admin');
     }
 
-    public function listJobs(Request $request){
+    public function listJobs(Request $request)
+    {
         $userId = Auth::user()->id;
         $filters = $request->query->all();
         $filters['created_by'] = $userId;
@@ -25,18 +27,19 @@ class JobController extends AdminController
         return view('admin.jobs.list', $data);
     }
 
-    public function create(Request $request){
+    public function create(Request $request)
+    {
         $id = Route::current()->parameter('id');
 
         $model = null;
-        if($id){
+        if ($id) {
             $job = Job::findOrFail($id);
-            if($job instanceof Job){
+            if ($job instanceof Job) {
                 $model = $job;
             }
         }
 
-        if($request->getMethod() == 'POST'){
+        if ($request->getMethod() == 'POST') {
             $this->validate($request, [
                 'title' => 'required|min:6|max:255',
                 'description' => 'required|min:6',
@@ -44,34 +47,53 @@ class JobController extends AdminController
                 'deadline' => 'nullable|date',
                 'salary_negotiable' => 'boolean'
             ]);
-            try{
+            try {
                 $data = $request->all();
                 $data['created_by'] = Auth::user()->id;
 
-                if($model instanceof Job){
+                if ($model instanceof Job) {
                     $model->update($data);
-                }   else    {
+                } else {
                     Job::create($data);
                 }
 
                 return redirect()->route('admin.job.list');
-            }   catch (\Throwable $e){
+            } catch (\Throwable $e) {
                 throw new \Exception($e->getMessage());
             }
         }
         return view('admin.jobs.create', compact('model'));
     }
 
-    public function delete($id){
+    public function delete($id)
+    {
         $job = Job::findOrFail($id);
-        if($job instanceof Job){
-            try{
+        if ($job instanceof Job) {
+            try {
                 $job->delete();
                 return redirect()->back()->with('errors', 'Job deleted.');
-            }   catch (\Throwable $e){
+            } catch (\Throwable $e) {
                 return redirect()->back()->with('errors', $e->getMessage());
             }
         }
+    }
+
+    public function matchJob(Job $job)
+    {
+        $categories = $job->title;
+        $categories = strtolower(str_replace(',',' ', $categories));
+        $users = User::all();
+        $results = [];
+        foreach ($users as $user){
+            $scriptPath = public_path('/matching.py');
+            $userCategories = strtolower(str_replace(',',' ', $user->categories));;
+            $command = escapeshellcmd("/usr/bin/python {$scriptPath} '{$categories}' '{$userCategories}'");
+            $results[] = [
+                'user' => $user,
+                'output' => doubleval(shell_exec($command))
+            ];
+        }
+        return view('admin.jobs.matchJobs', compact('results','job'));
     }
 
 }
