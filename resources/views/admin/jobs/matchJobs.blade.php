@@ -29,7 +29,7 @@
                                 <td>
                                     @if($v['user'])
                                         <a href="{{ route('user.detail.frontend',['user' => $v['user']->id]) }}">
-                                            {{ $v['user']->name }}
+                                            {{ $v['user']->name }} target="_blank"
                                         </a>
                                     @endif
                                 </td>
