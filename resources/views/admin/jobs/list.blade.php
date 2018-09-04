@@ -5,16 +5,16 @@
     <div class="col-md-12">
         @if(count($jobs) > 0)
             <table class="table table-bordered table-condensed table-striped table-hover">
-                <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Title</th>
-                    <th>Type</th>
-                    <th>DeadLine</th>
-                    <th>Preferred Gender</th>
-                    <th>Actions</th>
-                </tr>
-                </thead>
+              <thead>
+              <tr>
+                  <th>#</th>
+                  <th>Title</th>
+                  <th>Type</th>
+                  <th>DeadLine</th>
+                  <th>Preferred Gender</th>
+                  <th>Actions</th>
+              </tr>
+              </thead>
                 <tbody>
                 @foreach($jobs as $job)
                     <tr>
