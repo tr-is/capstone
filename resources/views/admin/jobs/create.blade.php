@@ -27,7 +27,7 @@
                     </div>
                     <div class="col-md-6">
                         @include('partials.form.input-text',[
-                            'label' => 'Type',
+                            'label' => 'Expereince Required',
                             'name' => 'type',
                             'errors' => $errors,
                             'model' => isset($model) ? $model : null
@@ -36,7 +36,7 @@
                     <div class="clearfix"></div>
                     <div class="col-md-6">
                         @include('partials.form.input-text',[
-                            'label' => 'Salary',
+                            'label' => 'Salary Range',
                             'name' => 'salary',
                             'errors' => $errors,
                             'model' => isset($model) ? $model : null
@@ -76,6 +76,24 @@
                             ]
                         ])
                     </div>
+                    <!-- Two Extra Fields Start -->
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label for="xyz" class="col-md-4 col-form-label text-md-right">Skills</label>
+                            <div class="col-md-6">
+                                <input id="xyz" type="text" class="form-control" name="xyz" value="" required="">
+                            </div>
+                        </div>                    
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label for="xyz" class="col-md-4 col-form-label text-md-right">Job Location</label>
+                            <div class="col-md-6">
+                                <input id="xyz" type="text" class="form-control" name="xyz" value="" required="">
+                            </div>
+                        </div>                    
+                    </div>
+                    <!-- Two Extra Fields End -->
                     <div class="clearfix"></div>
                     <div class="col-md-12">
                         @include('partials.form.input-text-editor',[
@@ -87,7 +105,7 @@
                     </div>
                     <div class="col-md-12">
                         @include('partials.form.input-text-editor',[
-                            'label' => 'Education Description',
+                            'label' => 'Education Level',
                             'name' => 'education_description',
                             'errors' => $errors,
                             'model' => isset($model) ? $model : null
