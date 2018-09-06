@@ -81,9 +81,46 @@
                                     @endif
                                 </div>
                             </div>
+                            <div class="form-group row">
+                                <label for="gender" class="col-md-4 col-form-label text-md-right">Education</label>
+
+                                <div class="col-md-6">
+                                    <select id="gender" type="text"
+                                            class="form-control{{ $errors->has('gender') ? ' is-invalid' : '' }}"
+                                            name="gender">
+                                        <option value="male" @if(old('gender') == 'male') selected @endif>Diploma</option>
+                                        <option value="male" @if(old('gender') == 'male') selected @endif>Under-Grad</option>
+                                        <option value="female" @if(old('gender') == 'female') selected @endif>Graduate</option>
+                                        <option value="other" @if(old('gender') == 'other') selected @endif>Phd</option>
+                                    </select>
+
+                                    @if ($errors->has('gender'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('gender') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
 
                             <div class="form-group row">
-                                <label for="categories" class="col-md-4 col-form-label text-md-right">{{ __('Job Categories') }}</label>
+                                <label for="categories" class="col-md-4 col-form-label text-md-right">Expected Salary</label>
+
+                                <div class="col-md-6">
+                                    <input id="categories" type="text"
+                                           class="form-control{{ $errors->has('categories') ? ' is-invalid' : '' }}"
+                                           name="categories"
+                                           placeholder="$"
+                                           value="{{ old('categories') }}" required autofocus>
+
+                                    @if ($errors->has('categories'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('categories') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="categories" class="col-md-4 col-form-label text-md-right">{{ __('Job Skills') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="categories" type="text"
@@ -99,6 +136,54 @@
                                     @endif
                                 </div>
                             </div>
+                            <div class="form-group row">
+                                <label for="categories" class="col-md-4 col-form-label text-md-right">{{ __('Experience') }}</label>
+    
+                                <div class="col-md-3">
+                                    <input id="categories" type="text"
+                                           class="form-control{{ $errors->has('categories') ? ' is-invalid' : '' }}"
+                                           name="categories"
+                                           placeholder="Years of expereince"
+                                           value="{{ old('categories') }}" required autofocus>
+
+                                    @if ($errors->has('categories'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('categories') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-3">
+                                    <input id="categories" type="text"
+                                           class="form-control{{ $errors->has('categories') ? ' is-invalid' : '' }}"
+                                           name="categories"
+                                           placeholder="Field of experience"
+                                           value="{{ old('categories') }}" required autofocus>
+
+                                    @if ($errors->has('categories'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('categories') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="categories" class="col-md-4 col-form-label text-md-right">{{ __('Distance from home') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="categories" type="text"
+                                           class="form-control{{ $errors->has('categories') ? ' is-invalid' : '' }}"
+                                           name="categories"
+                                           placeholder="Example: 5km from house."
+                                           value="{{ old('categories') }}" required autofocus>
+
+                                    @if ($errors->has('categories'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('categories') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
 
                             <div class="form-group row">
                                 <label for="email"
