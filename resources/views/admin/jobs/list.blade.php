@@ -9,7 +9,7 @@
               <tr>
                   <th>#</th>
                   <th>Title</th>
-                  <th>Type</th>
+                  <th>Experience</th>
                   <th>DeadLine</th>
                   <th>Preferred Gender</th>
                   <th>Actions</th>
