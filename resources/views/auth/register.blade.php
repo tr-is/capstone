@@ -82,103 +82,102 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="gender" class="col-md-4 col-form-label text-md-right">Education</label>
-
+                                <label for="education" class="col-md-4 col-form-label text-md-right">Education</label>
                                 <div class="col-md-6">
-                                    <select id="gender" type="text"
-                                            class="form-control{{ $errors->has('gender') ? ' is-invalid' : '' }}"
-                                            name="gender">
-                                        <option value="male" @if(old('gender') == 'male') selected @endif>Diploma</option>
-                                        <option value="male" @if(old('gender') == 'male') selected @endif>Under-Grad</option>
-                                        <option value="female" @if(old('gender') == 'female') selected @endif>Graduate</option>
-                                        <option value="other" @if(old('gender') == 'other') selected @endif>Phd</option>
+                                    <select id="education" type="text"
+                                            class="form-control{{ $errors->has('education') ? ' is-invalid' : '' }}"
+                                            name="education">
+                                        <option value="Diploma" @if(old('education') == 'Diploma') selected @endif>Diploma</option>
+                                        <option value="Under-Grad" @if(old('education') == 'Under-Grad') selected @endif>Under-Grad</option>
+                                        <option value="Graduate" @if(old('education') == 'Graduate') selected @endif>Graduate</option>
+                                        <option value="Phd" @if(old('education') == 'Phd') selected @endif>Phd</option>
                                     </select>
 
-                                    @if ($errors->has('gender'))
+                                    @if ($errors->has('education'))
                                         <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('gender') }}</strong>
+                                        <strong>{{ $errors->first('education') }}</strong>
                                     </span>
                                     @endif
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="categories" class="col-md-4 col-form-label text-md-right">Expected Salary</label>
+                                <label for="expected_salary" class="col-md-4 col-form-label text-md-right">Expected Salary</label>
 
                                 <div class="col-md-6">
-                                    <input id="categories" type="text"
-                                           class="form-control{{ $errors->has('categories') ? ' is-invalid' : '' }}"
-                                           name="categories"
+                                    <input id="expected_salary" type="text"
+                                           class="form-control{{ $errors->has('expected_salary') ? ' is-invalid' : '' }}"
+                                           name="expected_salary"
                                            placeholder="$"
-                                           value="{{ old('categories') }}" required autofocus>
+                                           value="{{ old('expected_salary') }}" required autofocus>
 
-                                    @if ($errors->has('categories'))
+                                    @if ($errors->has('expected_salary'))
                                         <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('categories') }}</strong>
+                                        <strong>{{ $errors->first('expected_salary') }}</strong>
                                     </span>
                                     @endif
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="categories" class="col-md-4 col-form-label text-md-right">{{ __('Job Skills') }}</label>
+                                <label for="skills" class="col-md-4 col-form-label text-md-right">{{ __('Job Skills') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="categories" type="text"
-                                           class="form-control{{ $errors->has('categories') ? ' is-invalid' : '' }}"
-                                           name="categories"
+                                    <input id="skills" type="text"
+                                           class="form-control{{ $errors->has('skills') ? ' is-invalid' : '' }}"
+                                           name="skills"
                                            placeholder="Eg: web developer, java developer, android"
-                                           value="{{ old('categories') }}" required autofocus>
+                                           value="{{ old('skills') }}" required autofocus>
 
-                                    @if ($errors->has('categories'))
+                                    @if ($errors->has('skills'))
                                         <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('categories') }}</strong>
+                                        <strong>{{ $errors->first('skills') }}</strong>
                                     </span>
                                     @endif
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="categories" class="col-md-4 col-form-label text-md-right">{{ __('Experience') }}</label>
+                                <label for="experience" class="col-md-4 col-form-label text-md-right">{{ __('Experience') }}</label>
     
                                 <div class="col-md-3">
-                                    <input id="categories" type="text"
-                                           class="form-control{{ $errors->has('categories') ? ' is-invalid' : '' }}"
-                                           name="categories"
+                                    <input id="experience" type="text"
+                                           class="form-control{{ $errors->has('experience') ? ' is-invalid' : '' }}"
+                                           name="experience"
                                            placeholder="Years of expereince"
-                                           value="{{ old('categories') }}" required autofocus>
+                                           value="{{ old('experience') }}" required autofocus>
 
-                                    @if ($errors->has('categories'))
+                                    @if ($errors->has('experience'))
                                         <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('categories') }}</strong>
+                                        <strong>{{ $errors->first('experience') }}</strong>
                                     </span>
                                     @endif
                                 </div>
                                 <div class="col-md-3">
-                                    <input id="categories" type="text"
-                                           class="form-control{{ $errors->has('categories') ? ' is-invalid' : '' }}"
-                                           name="categories"
+                                    <input id="field_of_experience" type="text"
+                                           class="form-control{{ $errors->has('field_of_experience') ? ' is-invalid' : '' }}"
+                                           name="field_of_experience"
                                            placeholder="Field of experience"
-                                           value="{{ old('categories') }}" required autofocus>
+                                           value="{{ old('field_of_experience') }}" required autofocus>
 
-                                    @if ($errors->has('categories'))
+                                    @if ($errors->has('field_of_experience'))
                                         <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('categories') }}</strong>
+                                        <strong>{{ $errors->first('field_of_experience') }}</strong>
                                     </span>
                                     @endif
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="categories" class="col-md-4 col-form-label text-md-right">{{ __('Distance from home') }}</label>
+                                <label for="preferred_location" class="col-md-4 col-form-label text-md-right">{{ __('Prefered Location') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="categories" type="text"
-                                           class="form-control{{ $errors->has('categories') ? ' is-invalid' : '' }}"
-                                           name="categories"
-                                           placeholder="Example: 5km from house."
-                                           value="{{ old('categories') }}" required autofocus>
+                                    <input id="preferred_location" type="text"
+                                           class="form-control{{ $errors->has('preferred_location') ? ' is-invalid' : '' }}"
+                                           name="preferred_location"
+                                           placeholder="Sydney, Perth etc."
+                                           value="{{ old('preferred_location') }}" required autofocus>
 
-                                    @if ($errors->has('categories'))
+                                    @if ($errors->has('preferred_location'))
                                         <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('categories') }}</strong>
+                                        <strong>{{ $errors->first('preferred_location') }}</strong>
                                     </span>
                                     @endif
                                 </div>
