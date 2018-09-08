@@ -5,8 +5,12 @@
         <input id="{{ $name }}" type="text"
                class="form-control {{ $errors->has($name) ? ' is-invalid' : '' }}"
                name="{{ $name }}"
-               value="@if($model && old($name) == ''){{ $model->$name }}@else{{ old($name) }}@endif"
-               required>
+               value="@if(isset($model) && old($name) == ''){{ $model->$name }}@else{{ old($name) }}@endif"
+               @if(isset($attrs) and is_array($attrs))
+                       @foreach($attrs as $k => $v)
+                       {{ $k }} = "{{ $v }}"
+                       @endforeach
+               @endif>
 
         @if ($errors->has($name))
             <span class="text-danger" role="alert">
