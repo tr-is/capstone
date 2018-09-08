@@ -21,6 +21,11 @@ class Job extends Model
         'preferred_gender',
         'specification',
         'education_description',
+        'experience',
+        'job_location',
+        'education',
+        'salary_range',
+        'skills_required',
         'status',
         'created_by'
     ];
