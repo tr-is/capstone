@@ -28,7 +28,7 @@
                     <div class="col-md-6">
                         @include('partials.form.input-text',[
                             'label' => 'Expereince Required',
-                            'name' => 'type',
+                            'name' => 'experience',
                             'errors' => $errors,
                             'model' => isset($model) ? $model : null
                         ])
@@ -37,7 +37,7 @@
                     <div class="col-md-6">
                         @include('partials.form.input-text',[
                             'label' => 'Salary Range',
-                            'name' => 'salary',
+                            'name' => 'salary_range',
                             'errors' => $errors,
                             'model' => isset($model) ? $model : null
                         ])
@@ -78,20 +78,20 @@
                     </div>
                     <!-- Two Extra Fields Start -->
                     <div class="col-md-6">
-                        <div class="form-group row">
-                            <label for="xyz" class="col-md-4 col-form-label text-md-right">Skills</label>
-                            <div class="col-md-6">
-                                <input id="xyz" type="text" class="form-control" name="xyz" value="" required="">
-                            </div>
-                        </div>                    
+                        @include('partials.form.input-text',[
+                            'label' => 'Skills',
+                            'name' => 'skills_required',
+                            'errors' => $errors,
+                            'model' => isset($model) ? $model : null
+                        ])
                     </div>
                     <div class="col-md-6">
-                        <div class="form-group row">
-                            <label for="xyz" class="col-md-4 col-form-label text-md-right">Job Location</label>
-                            <div class="col-md-6">
-                                <input id="xyz" type="text" class="form-control" name="xyz" value="" required="">
-                            </div>
-                        </div>                    
+                        @include('partials.form.input-text',[
+                            'label' => 'Job Location',
+                            'name' => 'job_location',
+                            'errors' => $errors,
+                            'model' => isset($model) ? $model : null
+                        ])
                     </div>
                     <!-- Two Extra Fields End -->
                     <div class="clearfix"></div>
