@@ -20,7 +20,7 @@
                     <tr>
                         <td>{{ $loop->index + 1 }}</td>
                         <td>{{ $job->title }}</td>
-                        <td>{{ $job->type }}</td>
+                        <td>{{ $job->experience }}</td>
                         <td>{{ $job->deadline }}</td>
                         <td>{{ $job->preferred_gender }}</td>
                         <td>
