@@ -15,6 +15,7 @@ class UpdateJobsTable extends Migration
     {
         Schema::table('jobs', function(Blueprint $table){
             $table->string('experience')->nullable();
+            $table->string('job_location')->nullable();
             $table->string('education')->nullable();
             $table->string('salary_range')->nullable();
             $table->string('skills_required')->nullable();
@@ -31,6 +32,7 @@ class UpdateJobsTable extends Migration
         Schema::table('jobs', function(Blueprint $table){
             $table->dropColumn([
                 'experience',
+                'job_location',
                 'education',
                 'salary_range',
                 'skills_required'
