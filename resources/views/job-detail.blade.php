@@ -38,5 +38,6 @@
                 </tr>
             </table>
         </div>
+        <button type="button" class="btn btn-success" style="margin: auto;display: block;">Apply Now</button>
     </div>
 @endsection
