@@ -43,13 +43,13 @@ class JobController extends AdminController
             $this->validate($request, [
                 'title' => 'required|min:6|max:255',
                 'description' => 'required|min:6',
-                'salary' => 'required',
                 'deadline' => 'nullable|date',
                 'salary_negotiable' => 'boolean'
             ]);
             try {
                 $data = $request->all();
                 $data['created_by'] = Auth::user()->id;
+                $data['salary'] = isset($data['salary']) ? $data['salary'] : '';
 
                 if ($model instanceof Job) {
                     $model->update($data);
@@ -80,17 +80,19 @@ class JobController extends AdminController
 
     public function matchJob(Job $job)
     {
-        $categories = $job->title;
-        $categories = strtolower(str_replace(',',' ', $categories));
+        $categories = $job->title ." ". $job->description . " ". $job->education_description ." ". $job->type;
+        // echo strip_tags($categories);
+        $categories = strtolower(str_replace(',',' ', strip_tags($categories)));
         $users = User::all();
         $results = [];
         foreach ($users as $user){
             $scriptPath = public_path('/matching.py');
-            $userCategories = strtolower(str_replace(',',' ', $user->categories));;
+            $userCategories =  $user->categories. " ". $user->address; // Need Education, total experience years and field of expereince, 
+            $userCategories = strtolower(str_replace(',',' ', strip_tags($userCategories))); 
             $command = escapeshellcmd("/usr/bin/python {$scriptPath} '{$categories}' '{$userCategories}'");
             $results[] = [
                 'user' => $user,
-                'output' => doubleval(shell_exec($command))
+                'output' => round(doubleval(shell_exec($command)) * 100,2)
             ];
         }
         arsort($results);
