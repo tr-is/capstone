@@ -90,9 +90,9 @@ class JobController extends AdminController
             $userCategories =  $user->categories." ". $user->address . " ". $user->skills . " ". $user->education . " ". $user->expected_salary ." ". $user->experience. " ". $user->field_of_experience. " ". $user->preferred_location;
             $userCategories = strtolower(str_replace(',',' ', strip_tags($userCategories))); 
             $command = escapeshellcmd("/usr/bin/python {$scriptPath} '{$categories}' '{$userCategories}'");
-            $results[] = [
-                'user' => $user,
-                'output' => round(doubleval(shell_exec($command)) * 100,2)
+            $results[] = [                
+                'output' => round(doubleval(shell_exec($command)) * 100,2),
+                'user' => $user
             ];
         }
         arsort($results);
