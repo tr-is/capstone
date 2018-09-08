@@ -20,6 +20,7 @@ Route::get('/user/{user}/detail', 'HomeController@userDetail')->name('user.detai
 Auth::routes();
 
 Route::get('/home', 'UserController@home')->name('home');
+Route::any('/profile/update', 'UserController@update')->name('user.profile.update');
 Route::get('/job/{slug}/detail', 'HomeController@jobDetail')->name('job.detail.frontend');
 
 Route::prefix('employer')->group(function() {
