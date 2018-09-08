@@ -3,7 +3,6 @@ import math
 import sys
 from collections import Counter
 
-
 def get_cosine(vec1, vec2):
     intersection = set(vec1.keys()) & set(vec2.keys())
     numerator = sum([vec1[x] * vec2[x] for x in intersection])
@@ -17,23 +16,19 @@ def get_cosine(vec1, vec2):
     else:
         return float(numerator) / denominator
 
-
 def text_to_vector(text):
     word = re.compile(r'\w+')
     words = word.findall(text)
     return Counter(words)
 
-
 def get_result(content_a, content_b):
-    text1 = content_a
-    text2 = content_b
+    text1 = ' '.join([x for x in content_a.split() if len(x)>=3])
+    text2 = ' '.join([x for x in content_b.split() if len(x)>=3])
 
     vector1 = text_to_vector(text1)
     vector2 = text_to_vector(text2)
 
     cosine_result = get_cosine(vector1, vector2)
-    return cosine_result * 100
-#will be passing job title and job seeker categories of interest and calculate if it matches or not
-# print get_result('I love github', 'Who love github')
+    return cosine_result
 
-print("%.5s%s"%(get_result(sys.argv[1], sys.argv[2]),"%"))
+print(get_result(sys.argv[1], sys.argv[2]))
