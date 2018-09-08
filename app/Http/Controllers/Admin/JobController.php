@@ -80,14 +80,14 @@ class JobController extends AdminController
 
     public function matchJob(Job $job)
     {
-        $categories = $job->title ." ". $job->description . " ". $job->education_description ." ". $job->type;
+        $categories = $job->job_location ." ".$job->specification ." ".$job->education_description ." ".$job->title ." ". $job->description . " ". $job->education_description ." ". $job->type . " ". $job->salary_range;
         // echo strip_tags($categories);
         $categories = strtolower(str_replace(',',' ', strip_tags($categories)));
         $users = User::all();
         $results = [];
         foreach ($users as $user){
             $scriptPath = public_path('/matching.py');
-            $userCategories =  $user->categories. " ". $user->address; // Need Education, total experience years and field of expereince, 
+            $userCategories =  $user->categories." ". $user->address . " ". $user->skills . " ". $user->education . " ". $user->expected_salary ." ". $user->experience. " ". $user->field_of_experience. " ". $user->preferred_location;
             $userCategories = strtolower(str_replace(',',' ', strip_tags($userCategories))); 
             $command = escapeshellcmd("/usr/bin/python {$scriptPath} '{$categories}' '{$userCategories}'");
             $results[] = [
