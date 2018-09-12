@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Job;
 use App\User;
 use Illuminate\Http\Request;
@@ -20,7 +21,7 @@ class HomeController extends Controller
         return view('welcome', compact('jobs'));
     }
 
-    public function jobDetail($slug){
+    public function jobDetail(Request $request){
         $slug = Route::current()->parameter('slug');
         $job = Job::where(['slug' => $slug])->get()->first();
         if(! $job instanceof Job){
@@ -29,7 +30,33 @@ class HomeController extends Controller
         return view('job-detail',compact('job'));
     }
 
-public function userDetail(User $user){
+    public function userDetail(User $user){
         return view('user-detail', compact('user'));
     }
+
+    public function applyJob(Job $job){
+        $user = Auth::user();
+        try{
+            $hasApplied = $user->jobs()->where([
+                'user_id' => $user->id,
+                'job_id' => $job->id
+            ])->exists();
+            if(! $hasApplied){
+                $user->jobs()->attach($job->id);
+            } else  {
+                return redirect()->back()->with('error','Already applied.');       
+            }
+        }   catch(\Exception $e){
+            dd($e->getMessage());
+        }
+        return redirect()->back()->with('success','Applied for job.');
+    }
+
+    public function listAppliedJobs(){
+
+        $jobs = Auth::user()->jobs()->get();
+        
+        return view('user.jobs.appliedjob', compact('jobs'));
+    }
+
 }
