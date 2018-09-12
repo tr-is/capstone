@@ -39,4 +39,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function jobs(){
+        return $this->belongsToMany('App\Job', 'users_jobs','user_id', 'job_id');
+    }
 }
