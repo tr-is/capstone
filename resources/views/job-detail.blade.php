@@ -2,6 +2,15 @@
 
 @section('content')
     <div class="container">
+        <div>
+            @if(! $job->hasUser(Auth::User()))    
+                <div class="col-md-4">
+                        <a href="{{ route('job.user.apply',$job->id) }}" class="btn btn-primary">Apply Now</a>
+                </div>
+            @else
+                <label class="label label-info"><button class="btn btn-success"> Already applied</button></label>    
+            @endif
+        </div>
         <div class="jumbrotron">
             <table class="table table-striped table-condensed table-hover table-striped">
                 <tr>
@@ -38,6 +47,6 @@
                 </tr>
             </table>
         </div>
-        <button type="button" class="btn btn-success" style="margin: auto;display: block;">Apply Now</button>
+
     </div>
 @endsection
