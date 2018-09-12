@@ -19,7 +19,11 @@
                             @if($jobs)
                                 <ul class="list-group">
                                     @foreach($jobs as $job)
-                                        <li class="list-group-item">{{ $job->title }}</li>
+                                        <li class="list-group-item">
+                                            <a href="{{ route('job.detail.frontend',['slug' => $job->slug]) }}">
+                                                {{ $job->title }}
+                                            </a>
+                                        </li>
                                     @endforeach
                                 </ul>
                             @endif
