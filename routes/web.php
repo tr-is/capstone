@@ -15,7 +15,11 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/', 'HomeController@index');
-Route::get('/user/{user}/detail', 'HomeController@userDetail')->name('user.detail.frontend');
+Route::get('/user/{user}/detail', 'HomeController@userDetail')->name('user.detail.frontend')->middleware('auth');
+
+//  user job controller
+    Route::get('user/{job}/apply', 'HomeController@applyJob')->name('job.user.apply');
+    Route::get('user/appliedjob', 'HomeController@listAppliedJobs')->name('job.user.applied');
 
 Auth::routes();
 
@@ -43,4 +47,6 @@ Route::prefix('employer')->group(function() {
      * Admin Job matching route
      */
     Route::get('/job/{job}/match', 'Admin\JobController@matchJob')->name('admin.job.match');
+
+    
 });
