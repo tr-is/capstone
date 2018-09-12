@@ -3,12 +3,16 @@
 @section('content')
     <div class="container">
         <div>
-            @if(! $job->hasUser(Auth::User()))    
-                <div class="col-md-4">
-                        <a href="{{ route('job.user.apply',$job->id) }}" class="btn btn-primary">Apply Now</a>
-                </div>
+            @if(Auth::User())
+                @if(! $job->hasUser(Auth::User()))    
+                    <div class="col-md-4">
+                            <a href="{{ route('job.user.apply',$job->id) }}" class="btn btn-primary">Apply Now</a>
+                    </div>
+                @else
+                    <label class="label label-info"><button class="btn btn-success"> Already applied</button></label>    
+                @endif
             @else
-                <label class="label label-info"><button class="btn btn-success"> Already applied</button></label>    
+                <label class="label label-info"><button class="btn btn-success"> Please Login to Apply</button></label>
             @endif
         </div>
         <div class="jumbrotron">
