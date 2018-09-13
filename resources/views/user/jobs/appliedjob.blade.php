@@ -13,7 +13,7 @@
                 @foreach($jobs as $job)
                 <tbody>
                    <td>
-                        <a href="{{ route('job.detail.frontend',['slug' => $job->slug]) }}">{{ $job->title }}</a>
+                        <li><a href="{{ route('job.detail.frontend',['slug' => $job->slug]) }}">{{ $job->title }}</a></li>
                     </td>
                 </tbody>
                 @endforeach
