@@ -41,7 +41,11 @@
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>L</b>J</span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>Lara</b>JOBS</span>
+            <span class="logo-lg">
+                <div class="col-md-12">
+                    <img src="{{ asset('bundles/images/logo.png') }}" alt="" style="width: 150px;height: 50px">
+                </div>
+            </span>
         </a>
 
         <!-- Header Navbar: style can be found in header.less -->
@@ -57,6 +61,7 @@
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <span class="hidden-xs">{{ Auth::user()->name  }}</span>
+                            <i class="fa fa-caret-down" aria-hidden="true"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <li class="user-footer">
