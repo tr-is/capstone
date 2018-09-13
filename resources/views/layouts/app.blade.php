@@ -66,7 +66,6 @@
                     <ul class="navbar-nav mr-auto">
 
                     </ul>
-                    <div class="col-md-10 col-sm-12 col-xs-12"> 
                         <div class="navbar navbar-default" role="navigation">
                          <div class="navbar-collapse collapse" id="nav-main">
                         <!-- Right Side Of Navbar -->
@@ -74,7 +73,7 @@
                             <!-- Authentication Links -->
                             @guest
                                 <li class="dropdown active"><a href="#">Home </a> </li>
-                                <li class="postjob">
+                                <li class="postjob" style="padding: 0px 10px 10px 0px;">
                                     <a href="#" data-toggle="modal" data-target="#loginModal">
                                         Login
                                     </a>
@@ -119,7 +118,6 @@
                             @endguest
                         </ul>
                         </div>
-                    </div>
             </div>
                 </div>
                 <div class="clearfix"></div>
