@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+    <div class="container">
     <div class="col-md-12">
         
             <table class="table table-bordered table-condensed table-striped table-hover">
@@ -10,17 +10,16 @@
                     <th>List of job applied</th>
                 </tr>
                 </thead>
-                <tbody>
-                
                 @foreach($jobs as $job)
-
+                <tbody>
                    <td>
-                    <h4><a href="{{ route('job.detail.frontend',['slug' => $job->slug]) }}">{{ $job->title }}</a></h4></td>
-                @endforeach
+                        <a href="{{ route('job.detail.frontend',['slug' => $job->slug]) }}">{{ $job->title }}</a>
+                    </td>
                 </tbody>
+                @endforeach
             </table>
               
-        
+    </div>
     </div>
 
 @endsection
