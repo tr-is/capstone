@@ -102,7 +102,7 @@
                                     </a>
 
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="">{{ __('applied job') }}</a>
+                                        <a class="dropdown-item" href="{{ route('job.user.applied') }}">{{ __('applied job') }}</a>
                                         <a class="dropdown-item" href="{{ route('user.profile.update') }}">{{ __('Profile') }}</a>
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
