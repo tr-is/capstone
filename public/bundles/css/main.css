@@ -507,7 +507,7 @@ h6 {
 }
 
 .searchbar .btn {
-	background: #263bd6;
+	background:#263bd6;
 	border-radius: 0;
 	color: #fff;
 	border: none;
@@ -889,8 +889,9 @@ a.wit-btn {
 	background: #1047a0;
 
 }
-.howlist li:nth-child(2) .iconcircle{background:#6ACA00; border-color:#83ec0f;}
-.howlist li:last-child .iconcircle{background:#00C9C6; border-color:#0AD3AF;}
+
+.howlist li:nth-child(2) .iconcircle{background:#6ACA00; } /*border-color:#83ec0f */
+.howlist li:last-child .iconcircle{background:#00C9C6; }   /* border-color:#0AD3AF; */
 .howlist li .iconcircle i {	font-size: 48px; color: #fff;}
 
 
