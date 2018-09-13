@@ -72,7 +72,7 @@
                             <ul class="navbar-nav ml-auto">
                             <!-- Authentication Links -->
                             @guest
-                                <li class="dropdown active"><a href="#">Home </a> </li>
+                                <li class="dropdown active"><a href="{{ url('/') }}">Home </a> </li>
                                 <li class="postjob" style="padding: 0px 10px 10px 0px;">
                                     <a href="#" data-toggle="modal" data-target="#loginModal">
                                         Login
