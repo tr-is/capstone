@@ -86,8 +86,8 @@ a {
 a:focus {
     text-decoration: none;
 }
-a:focus { 
-    outline: 0 solid 
+a:focus {
+    outline: 0 solid
 }
 input:focus, textarea:focus{
     outline: none;
@@ -98,7 +98,7 @@ p {
 img {
 	max-width: 100%;
 }
-select{  
+select{
  -webkit-border-radius: 0;
  -moz-border-radius: 0;
  border-radius: 0;
@@ -880,20 +880,20 @@ a.wit-btn {
 .howlist li .iconcircle {
 	width: 100px;
 	height: 100px;
-	border: 3px solid #78ceff;
-	border-radius: 50%;
+	border: 3px solid #114dad;
+	border-radius: 45%;
 	text-align: center;
 	line-height: 115px;
 	margin-bottom: 15px;
 	display: inline-block;
-	background: #263bd6;
+	background: #1047a0;
+
 }
 .howlist li:nth-child(2) .iconcircle{background:#6ACA00; border-color:#83ec0f;}
-.howlist li:last-child .iconcircle{background:#f8a60c; border-color:#ffc456;}
-.howlist li .iconcircle i {
-	font-size: 48px;
-	color: #fff;
-}
+.howlist li:last-child .iconcircle{background:#00C9C6; border-color:#0AD3AF;}
+.howlist li .iconcircle i {	font-size: 48px; color: #fff;}
+
+
 .howlist li h4 {
 	font-size: 24px;
 	font-weight: 700;
@@ -993,7 +993,7 @@ a.wit-btn {
 	-ms-transition: 0.4s ease-in-out;
 	-moz-transition: 0.4s ease-in-out;
 }
-.jobslist li .jobint:hover {	
+.jobslist li .jobint:hover {
 	box-shadow: 0 0 20px rgba(0,0,0,0.1);
 	border-color: #263bd6
 }
