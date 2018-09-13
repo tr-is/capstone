@@ -44,7 +44,6 @@
   <div class="container"> 
     <!-- title start -->
     <div class="titleTop">
-      <div class="subtitle">Here You Can See</div>
       <h3>How It <span>Works?</span></h3>
     </div>
     <!-- title end -->
@@ -82,29 +81,32 @@
   <div class="container"> 
     <!-- title start -->
     <div class="titleTop">
-      <div class="subtitle">Here You Can See</div>
       <h3>Latest <span>Jobs</span></h3>
     </div>
     <!-- title end -->
     
     <ul class="jobslist row">
       <!--Job 1-->
+      @foreach($jobs as $job)
       <li class="col-md-4 col-sm-6">
+      
         <div class="jobint">
+        
           <div class="row">
-            @foreach($jobs as $job)
-                <div class="col-md-9 col-sm-9">
+                <div class="col-md-12 col-sm-12">
                   <h4><a href="{{ route('job.detail.frontend',['slug' => $job->slug]) }}">{{ $job->title }}</a></h4>
-                  <div class="company"><a href="##.">Datebase Management Company</a></div>
-                  <div class="jobloc"><label class="fulltime">Full Time</label>  - <span>New York</span></div>
+                  <div class="company">{{$job -> created_by}}</div>
+                  <div class="jobloc"><label class="fulltime">$ {{ $job -> salary_range}}</label>   <span>{{ $job -> job_location}}</span></div>
                 </div>
-            @endforeach    
+            
           </div>
+              
         </div>
+        
       </li>
+      @endforeach
       <!--Job end--> 
     </ul>
-   
   </div>
 </div>
 <!-- Latest Jobs ends --> 
