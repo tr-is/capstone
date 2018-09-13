@@ -27,10 +27,17 @@
                     <div class="col-md-3">
                     </div>
                     <div class="col-md-5">
-                        <input type="text" class="form-control" value="{{ request('query') }}" placeholder="Enter Skills or job title">
+                         <input type="text"
+                           name="query"
+                           class="form-control"
+                           placeholder="Search text"
+                           value="{{ request('query') }}"
+                           aria-label="Recipient's username"
+                           aria-describedby="basic-addon2">
                     </div>
                     <div class="col-md-2">
-                        <input type="submit" class="btn" value="Search Job">
+                      <button class="btn btn-outline-secondary" type="submit">Search Job</button>
+                       
                     </div>
                 </div>
             </form> 
@@ -95,7 +102,7 @@
           <div class="row">
                 <div class="col-md-12 col-sm-12">
                   <h4><a href="{{ route('job.detail.frontend',['slug' => $job->slug]) }}">{{ $job->title }}</a></h4>
-                  <!-- <div class="company">{{$job -> created_by}}</div> -->
+                  <div class="company">{{$job -> created_by}}</div>
                   <div class="jobloc"><label class="fulltime">$ {{ $job -> salary_range}}</label>   <span>{{ $job -> job_location}}</span></div>
                 </div>
             
