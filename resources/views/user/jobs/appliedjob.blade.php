@@ -7,17 +7,15 @@
             <table class="table table-bordered table-condensed table-striped table-hover">
                 <thead>
                 <tr>
-                    
-                    <th>Title</th>
-                    <th>Actions</th>
+                    <th>List of job applied</th>
                 </tr>
                 </thead>
                 <tbody>
                 
                 @foreach($jobs as $job)
 
-                    <td>{{ $job->title }}</td>
-                    <td>delete</td>    
+                   <td>
+                    <h4><a href="{{ route('job.detail.frontend',['slug' => $job->slug]) }}">{{ $job->title }}</a></h4></td>
                 @endforeach
                 </tbody>
             </table>
