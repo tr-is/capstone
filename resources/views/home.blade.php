@@ -24,6 +24,7 @@
                                                 {{ $job->title }}
                                             </a>
                                         </li>
+                                        
                                     @endforeach
                                 </ul>
                             @endif
