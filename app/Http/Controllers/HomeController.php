@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Auth;
 use App\Job;
 use App\User;
+use App\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Symfony\Component\HttpFoundation\Response;
@@ -13,12 +14,15 @@ class HomeController extends Controller
 {
     public function index(Request $request){
         $query = trim($request->query('query'));
+        $admins = Admin::all();
         if(!empty($query)){
-            $jobs = Job::where('title','like',"%{$query}%")->take(10)->get();
+            $jobs = Job::with('admin')->where('title','like',"%{$query}%")->take(10)->get();
+
         }   else    {
-            $jobs = Job::take(10)->get();
+            $jobs = Job::with('admin')->take(10)->get();
         }
-        return view('welcome', compact('jobs'));
+        
+        return view('welcome')->withJobs($jobs)->withAdmins($admins);
     }
 
     public function jobDetail(Request $request){
@@ -27,7 +31,20 @@ class HomeController extends Controller
         if(! $job instanceof Job){
             return redirect()->route('home');
         }
-        return view('job-detail',compact('job'));
+
+        $user = Auth::user();
+        $categories = $job->job_location ." ".$job->specification ." ".$job->education_description ." ".$job->title ." ". $job->description . " ". $job->education_description ." ". $job->type . " ". $job->salary_range;
+        $categories = strtolower(str_replace(',',' ', strip_tags($categories)));
+        $match = null;
+        if($user instanceof User){
+            $scriptPath = public_path('/matching.py');
+            $userCategories =  $user->categories." ". $user->address . " ". $user->skills . " ". $user->education . " ". $user->expected_salary ." ". $user->experience. " ". $user->field_of_experience. " ". $user->preferred_location;
+            $userCategories = strtolower(str_replace(',',' ', strip_tags($userCategories))); 
+            $command = escapeshellcmd("/usr/bin/python {$scriptPath} '{$categories}' '{$userCategories}'");
+            $match = round(doubleval(shell_exec($command)) * 100,2);
+        }
+
+        return view('job-detail',compact('job', 'match'));
     }
 
     public function userDetail(User $user){
