@@ -1,8 +1,7 @@
 /*------------------------------------------
 Project Name : Jobs Portal
-Desgined By  : eCreative solutions
-Developed By : sharjeel;
-Date        :  09/Jan/17;
+Desgined By  : rightjobs
+
 
 Table Of Index
 ------------------
@@ -134,7 +133,7 @@ select{
 	color: #000;
 }
 .titleTop h3 span {
-	color: #263bd6;
+	color: #00C9C6;     /* colour of secound word in home page  #263bd6*/    
 	font-weight: 200;
 }
 
@@ -507,7 +506,7 @@ h6 {
 }
 
 .searchbar .btn {
-	background:#263bd6;
+	background:#00C9C6;     /*search button colour */
 	border-radius: 0;
 	color: #fff;
 	border: none;
@@ -891,7 +890,7 @@ a.wit-btn {
 }
 
 .howlist li:nth-child(2) .iconcircle{background:#6ACA00; } /*border-color:#83ec0f */
-.howlist li:last-child .iconcircle{background:#00C9C6; }   /* border-color:#0AD3AF; */
+.howlist li:last-child .iconcircle{background::#00C9C6; }   /* border-color:#0AD3AF; */
 .howlist li .iconcircle i {	font-size: 48px; color: #fff;}
 
 
@@ -2221,9 +2220,6 @@ ul.orderlist li:before {
 }
 
 
-/**************************
-	Pay Packages
-**************************/
 
 
 
