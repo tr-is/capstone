@@ -11,13 +11,13 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm popup">
-                            <div class="popup-content" style="background: #f9a784;">
+                            <div class="popup-content">
                                 <h4>FOR JOBSEEKER</h4>
                                 <a href="{{ url('/login') }}" class="btn btn-primary">Login</a>
                             </div>
                         </div>
                         <div class="col-sm">
-                            <div class="popup-content" style="background: #17aef5;">
+                            <div class="popup-content">
                                 <h4>FOR EMPLOYER</h4>
                                 <a href="{{ route('admin.login') }}" class="btn btn-info">Login</a>
                             </div>
