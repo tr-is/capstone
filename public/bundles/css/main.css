@@ -1,7 +1,8 @@
 /*------------------------------------------
 Project Name : Jobs Portal
-Desgined By  : rightjobs
-
+Desgined By  : eCreative solutions
+Developed By : sharjeel;
+Date        :  09/Jan/17;
 
 Table Of Index
 ------------------
@@ -85,8 +86,8 @@ a {
 a:focus {
     text-decoration: none;
 }
-a:focus {
-    outline: 0 solid
+a:focus { 
+    outline: 0 solid 
 }
 input:focus, textarea:focus{
     outline: none;
@@ -97,7 +98,7 @@ p {
 img {
 	max-width: 100%;
 }
-select{
+select{  
  -webkit-border-radius: 0;
  -moz-border-radius: 0;
  border-radius: 0;
@@ -133,7 +134,7 @@ select{
 	color: #000;
 }
 .titleTop h3 span {
-	color: #019694;     /* colour of secound word in home page  #263bd6*/
+	color: #263bd6;
 	font-weight: 200;
 }
 
@@ -453,16 +454,17 @@ h6 {
 .navbar-nav li.postjob, .navbar-nav li.jobseeker{padding:0;}
 
 .navbar-nav li.postjob a {
-	background: #263bd6;
-	color: #fff;
-	padding:16px 15px;
-	border-bottom-color: #263bd6;
+	/* background: #263bd6; */
+	/* color: #fff; */
+	border-right: 1px solid #ddd;
+	padding:0px 4px;
+	/* border-bottom-color: #263bd6; */
 }
 .navbar-nav li.jobseeker a {
-	background: #666;
-	color: #fff;
+	/* background: #666; */
+	/* color: #fff; */
 	padding:16px 15px;
-	border-bottom-color: #666;
+	/* border-bottom-color: #666; */
 }
 .navbar-nav li a.postjob:hover, .navbar-nav li a.jobseeker:hover {
 	text-decoration: none;
@@ -506,7 +508,7 @@ h6 {
 }
 
 .searchbar .btn {
-	background:#019694;     /*search button colour */
+	background: #263bd6;
 	border-radius: 0;
 	color: #fff;
 	border: none;
@@ -879,21 +881,20 @@ a.wit-btn {
 .howlist li .iconcircle {
 	width: 100px;
 	height: 100px;
-	border: 3px ; /*solid #114dad*/
-	border-radius: 45%;
+	border: 3px solid #78ceff;
+	border-radius: 50%;
 	text-align: center;
 	line-height: 115px;
 	margin-bottom: 15px;
 	display: inline-block;
-	background: #1047a0;
-
+	background: #263bd6;
 }
-
-.howlist li:nth-child(2) .iconcircle{background:#6ACA00; } /*border-color:#83ec0f */
-.howlist li:last-child .iconcircle{background::#00C9C6; }   /* border-color:#0AD3AF; */
-.howlist li .iconcircle i {	font-size: 48px; color: #fff;}
-
-
+.howlist li:nth-child(2) .iconcircle{background:#6ACA00; border-color:#83ec0f;}
+.howlist li:last-child .iconcircle{background:#f8a60c; border-color:#ffc456;}
+.howlist li .iconcircle i {
+	font-size: 48px;
+	color: #fff;
+}
 .howlist li h4 {
 	font-size: 24px;
 	font-weight: 700;
@@ -993,7 +994,7 @@ a.wit-btn {
 	-ms-transition: 0.4s ease-in-out;
 	-moz-transition: 0.4s ease-in-out;
 }
-.jobslist li .jobint:hover {
+.jobslist li .jobint:hover {	
 	box-shadow: 0 0 20px rgba(0,0,0,0.1);
 	border-color: #263bd6
 }
@@ -2220,6 +2221,9 @@ ul.orderlist li:before {
 }
 
 
+/**************************
+	Pay Packages
+**************************/
 
 
 
