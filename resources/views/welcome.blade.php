@@ -52,6 +52,7 @@
     <!-- title start -->
     <div class="titleTop">
       <h3>How It <span>Works?</span></h3>
+      <h4>Get started and find your dream job today!</h4>
     </div>
     <!-- title end -->
     <ul class="howlist row">
@@ -83,12 +84,15 @@
 </div>
 <!-- How it Works Ends -->
 
+
+
 <!-- Latest Jobs start -->
 <div class="section greybg">
   <div class="container">
     <!-- title start -->
     <div class="titleTop">
       <h3>Latest <span>Jobs</span></h3>
+      <h4>See what job opportunities we have for you.</h4>
     </div>
     <!-- title end -->
 
@@ -117,6 +121,14 @@
   </div>
 </div>
 <!-- Latest Jobs ends -->
+
+<!-- How it Works start -->
+<div class="section howitwrap">
+  <div class="container">
+    <!-- title start -->
+    <div class="titleTop">
+      <h3>Connect with your next<span>big hires!</span></h3>
+    </div>
 
 
 <script type="application/javascript">
