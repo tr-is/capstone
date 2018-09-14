@@ -52,6 +52,7 @@
     <!-- title start -->
     <div class="titleTop">
       <h3>How It <span>Works?</span></h3>
+      <h4>Get started and find your dream job today!</h4>
     </div>
     <!-- title end -->
     <ul class="howlist row">
