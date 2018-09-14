@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-    <div class="col-md-12">
+    <div class="col-md-12" style="margin: 11px 10px 10px 10px;">
         
             <table class="table table-bordered table-condensed table-striped table-hover">
                 <thead>
