@@ -57,12 +57,15 @@ class Job extends Model
         return $this->belongsToMany('App\User', 'users_jobs','user_id', 'job_id');
     }
 
+     public function admin(){
+        return $this->belongsTo('App\Admin','created_by');
+    }
+
     public function hasUser(User $user ){
         
             return $user->jobs()->where([
                 'user_id' => $user->id,
                 'job_id' => $this->id
             ])->exists();
-
     }
 }
