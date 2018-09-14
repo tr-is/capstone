@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <div>
+        <div style="padding: 10px;">
             @if(Auth::User())
                 @if(! $job->hasUser(Auth::User()))    
                     <div class="col-md-4">
