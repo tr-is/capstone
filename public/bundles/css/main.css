@@ -911,7 +911,7 @@ a.wit-btn {
            == Top Employers css==
 *************************************************/
 .employerList {
-	margin: 0 -15px;
+	margin: 6px -15px 25px 12px;
 }
 .employerList:after {
 	display: table;
