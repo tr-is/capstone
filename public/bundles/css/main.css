@@ -880,7 +880,7 @@ a.wit-btn {
 .howlist li .iconcircle {
 	width: 100px;
 	height: 100px;
-	border: 3px solid #114dad;
+	border: 3px ; /*solid #114dad*/
 	border-radius: 45%;
 	text-align: center;
 	line-height: 115px;
