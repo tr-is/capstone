@@ -21,6 +21,7 @@ Route::get('/user/{user}/detail', 'HomeController@userDetail')->name('user.detai
 Route::get('user/{job}/apply', 'HomeController@applyJob')->name('job.user.apply');
 Route::get('user/appliedjob', 'HomeController@listAppliedJobs')->name('job.user.applied');
 
+
 Auth::routes();
 
 Route::get('/home', 'UserController@home')->name('home');
