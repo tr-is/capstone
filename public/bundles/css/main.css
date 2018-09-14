@@ -133,7 +133,7 @@ select{
 	color: #000;
 }
 .titleTop h3 span {
-	color: #00C9C6;     /* colour of secound word in home page  #263bd6*/    
+	color: #00afad;     /* colour of secound word in home page  #263bd6*/    
 	font-weight: 200;
 }
 
@@ -506,7 +506,7 @@ h6 {
 }
 
 .searchbar .btn {
-	background:#00C9C6;     /*search button colour */
+	background:#00afad;     /*search button colour */
 	border-radius: 0;
 	color: #fff;
 	border: none;
