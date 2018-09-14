@@ -11,7 +11,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm popup">
-                            <div class="popup-content" style="background: #F2652A;">
+                            <div class="popup-content" style="background: #f9a784;">
                                 <h4>FOR JOBSEEKER</h4>
                                 <a href="{{ url('/login') }}" class="btn btn-primary">Login</a>
                             </div>
