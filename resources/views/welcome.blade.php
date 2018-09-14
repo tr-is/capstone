@@ -84,13 +84,7 @@
 </div>
 <!-- How it Works Ends -->
 
-<!-- How it Works start -->
-<div class="section howitwrap">
-  <div class="container">
-    <!-- title start -->
-    <div class="titleTop">
-      <h3>Connect with your next<span>big hires!</span></h3>
-    </div>
+
 
 <!-- Latest Jobs start -->
 <div class="section greybg">
@@ -126,6 +120,14 @@
   </div>
 </div>
 <!-- Latest Jobs ends -->
+
+<!-- How it Works start -->
+<div class="section howitwrap">
+  <div class="container">
+    <!-- title start -->
+    <div class="titleTop">
+      <h3>Connect with your next<span>big hires!</span></h3>
+    </div>
 
 
 <script type="application/javascript">
