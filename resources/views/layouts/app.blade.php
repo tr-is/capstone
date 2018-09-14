@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Right Job | No. 1 Job Site') }}</title>
+    <title>{{ config('app.name', 'Right Job') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -47,11 +47,13 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                    <a class="navbar-brand" href="{{ url('/') }}"> 
-                        <div class="col-md-2 col-sm-3 col-xs-12">
-                            <img src="{{ asset('bundles/images/logo.png') }}" alt="">
-                        </div>
-                    </a>
+                <div class='col-md-2'>
+                        <a class="navbar-brand" href="{{ url('/') }}"> 
+                            <div class="col-md-12 col-sm-3 col-xs-12">
+                                <img src="{{ asset('bundles/images/logo.png') }}" alt="">
+                            </div>
+                        </a>
+                </div>
                     <button class="navbar-toggler"
                             type="button"
                             data-toggle="collapse"
@@ -72,17 +74,32 @@
                             <ul class="navbar-nav ml-auto">
                             <!-- Authentication Links -->
                             @guest
-                                <li class="dropdown active"><a href="#">Home </a> </li>
-                                <li class="postjob" style="padding: 0px 10px 10px 0px;">
-                                    <a href="#" data-toggle="modal" data-target="#loginModal">
-                                        Login
+                                <li class="dropdown active"><a href="{{ url('/') }}">Home </a> </li>
+                                <li class="postjob" >
+                                    <a href="{{ route('admin.login') }}">
+                                        Login As Employer
                                     </a>
                                 </li>
-                                <li class="jobseeker">
+                                <li class="postjob" >
+                                    <a href="{{ url('/login') }}">
+                                        Login As Job Seeker
+                                    </a>
+                                </li>
+                                <li class="postjob" >
+                                    <a href="{{ route('admin.register.form') }}">
+                                        Register As Employer
+                                    </a>
+                                </li>
+                                <li class="postjob" >
+                                    <a href="{{ url('/register') }}">
+                                    Register As Job Seeker
+                                    </a>
+                                </li>
+                                <!-- <li class="jobseeker">
                                     <a href="#"  data-toggle="modal" data-target="#registerModal">
                                         Register
                                     </a>
-                                </li>
+                                </li> -->
                                 {{--<li class="nav-item">--}}
                                     {{--<a class="nav-link" href="{{ route('login') }}">{{ __('Job Seeker Login') }}</a>--}}
                                 {{--</li>--}}
@@ -124,10 +141,17 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="">
             @yield('content')
         </main>
     </div>
     @include('partials.frontend.modals')
 </body>
+<footer>
+    <div class="copyright">
+  <div class="container">
+    <div class="bttxt">Copyright © 2018 . All Rights Reserved. </div>
+  </div>
+</div>
+</footer>
 </html>
