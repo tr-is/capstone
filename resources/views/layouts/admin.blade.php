@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>RightJobs | Dashboard</title>
+    <title>LaraJobs | Dashboard</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -43,9 +43,10 @@
             <!-- logo for regular state and mobile devices -->
             <span class="logo-lg">
                 <div class="col-md-12">
-                    <img src="{{ asset('bundles/images/logo.png') }}" alt="" style="width: 150px;height: 50px">
+                            <img src="{{ asset('bundles/images/logo.png') }}" alt="" style="width: 150px;height: 50px">
                 </div>
             </span>
+            
         </a>
 
         <!-- Header Navbar: style can be found in header.less -->
