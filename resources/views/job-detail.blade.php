@@ -2,20 +2,28 @@
 
 @section('content')
     <div class="container">
+        
         <div style="padding: 10px;">
+            <div class="row">
             @if(Auth::User())
                 @if(! $job->hasUser(Auth::User()))    
                     <div class="col-md-4">
                             <a href="{{ route('job.user.apply',$job->id) }}" class="btn btn-primary">Apply Now</a>
                     </div>
+                    
                 @else
                     <label class="label label-info"><button class="btn btn-success"> Already applied</button></label>    
                 @endif
+                 <div class="col-md-4">
+                    <label class="label label-info">
+                        <button class="btn btn-success"> Your Profile Has Matched {{ $match }}%</button>
+                    </label>
+                </div>
             @else
                 <label class="label label-info"><button class="btn btn-success"> Please Login to Apply</button></label>
             @endif
         </div>
-        
+        </div>
         <div class="jumbrotron">
             <table class="table table-striped table-condensed table-hover table-striped">
                 <tr>
