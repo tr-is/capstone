@@ -16,10 +16,10 @@ class HomeController extends Controller
         $query = trim($request->query('query'));
         $admins = Admin::all();
         if(!empty($query)){
-            $jobs = Job::with('admin')->where('title','like',"%{$query}%")->take(10)->get();
+            $jobs = Job::with('admin')->where('title','like',"%{$query}%")->take(100)->get();
 
         }   else    {
-            $jobs = Job::with('admin')->take(10)->get();
+            $jobs = Job::with('admin')->take(100)->get();
         }
         
         return view('welcome')->withJobs($jobs)->withAdmins($admins);

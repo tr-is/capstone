@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Right Job') }}</title>
+    <title>{{ config('app.name', 'Right Job | No. 1 Job Site') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -19,7 +19,6 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
     
 <!-- Owl carousel -->
 <link href="{{ asset('public/bundles/css/owl.carousel.css') }}" rel="stylesheet">
@@ -29,12 +28,12 @@
 
 <!-- Font Awesome -->
 <link href="{{ asset('/bundles/css/font-awesome.css')}}" rel="stylesheet">
-
 <!-- Custom Style -->
 <link href="{{ asset('/bundles/css/main.css')}}" rel="stylesheet">
 
     <style>
         .popup-content{
+            background: #ffffff;
             text-align: center;
             padding-top: 50px;
             padding-bottom: 50px;
@@ -43,17 +42,14 @@
 
 </head>
 <body>
-   
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <div class='col-md-2'>
-                        <a class="navbar-brand" href="{{ url('/') }}"> 
-                            <div class="col-md-12 col-sm-3 col-xs-12">
-                                <img src="{{ asset('bundles/images/logo.png') }}" alt="">
-                            </div>
-                        </a>
-                </div>
+                    <a class="navbar-brand" href="{{ url('/') }}"> 
+                        <div class="col-md-2 col-sm-3 col-xs-12">
+                            <img src="{{ asset('bundles/images/logo.png') }}" alt="">
+                        </div>
+                    </a>
                     <button class="navbar-toggler"
                             type="button"
                             data-toggle="collapse"
@@ -64,42 +60,17 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-                        <div class="navbar navbar-default" role="navigation">
-                         <div class="navbar-collapse collapse" id="nav-main">
-                        <!-- Right Side Of Navbar -->
-                            <ul class="navbar-nav ml-auto">
-                            <!-- Authentication Links -->
+                        <ul class="navbar-nav ml-auto">
                             @guest
-                                <li class="dropdown active"><a href="{{ url('/') }}">Home </a> </li>
-                                <li class="postjob" >
-                                    <a href="{{ route('admin.login') }}">
-                                        Login As Employer
-                                    </a>
+                                <li class="dropdown"><a href="{{ url('/') }}">Home</a></li>
+                                <li class="postjob">
+                                    <a href="#" data-toggle="modal" data-target="#loginModal">Login</a>
                                 </li>
-                                <li class="postjob" >
-                                    <a href="{{ url('/login') }}">
-                                        Login As Job Seeker
-                                    </a>
-                                </li>
-                                <li class="postjob" >
-                                    <a href="{{ route('admin.register.form') }}">
-                                        Register As Employer
-                                    </a>
-                                </li>
-                                <li class="postjob" >
-                                    <a href="{{ url('/register') }}">
-                                    Register As Job Seeker
-                                    </a>
-                                </li>
-                                <!-- <li class="jobseeker">
+                                <li class="jobseeker">
                                     <a href="#"  data-toggle="modal" data-target="#registerModal">
                                         Register
                                     </a>
-                                </li> -->
+                                </li>
                                 {{--<li class="nav-item">--}}
                                     {{--<a class="nav-link" href="{{ route('login') }}">{{ __('Job Seeker Login') }}</a>--}}
                                 {{--</li>--}}
@@ -126,7 +97,6 @@
                                                          document.getElementById('logout-form').submit();">
                                             {{ __('Logout') }}
                                          </a>
-
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             @csrf
                                         </form>
@@ -134,14 +104,12 @@
                                 </li>
                             @endguest
                         </ul>
-                        </div>
-            </div>
-                </div>
+                        
+                    </div>
                 <div class="clearfix"></div>
             </div>
         </nav>
-
-        <main class="">
+        <main class="py-4">
             @yield('content')
         </main>
     </div>
@@ -149,9 +117,9 @@
 </body>
 <footer>
     <div class="copyright">
-  <div class="container">
-    <div class="bttxt">Copyright © 2018 . All Rights Reserved. </div>
-  </div>
+        <div class="container">
+            <div class="bttxt">Copyright © 2018 . All Rights Reserved. </div>
+        </div>
 </div>
 </footer>
 </html>
