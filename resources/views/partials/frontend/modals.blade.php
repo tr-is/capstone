@@ -42,13 +42,13 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm popup">
-                            <div class="popup-content" style="background: #F2652A;">
+                            <div class="popup-content">
                                 <h4>FOR JOBSEEKER</h4>
                                 <a href="{{ url('/register') }}" class="btn btn-primary">Register</a>
                             </div>
                         </div>
                         <div class="col-sm">
-                            <div class="popup-content" style="background: #17aef5;">
+                            <div class="popup-content">
                                 <h4>FOR EMPLOYER</h4>
                                 <a href="{{ route('admin.register.form') }}" class="btn btn-info">Register</a>
                             </div>
