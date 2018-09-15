@@ -59,7 +59,7 @@
       <li class="col-md-4 col-sm-4">
         <div class="iconcircle"><i class="fa fa-user" aria-hidden="true"></i></div>
         <h4>Create An Account</h4>
-        <p></p>
+        <p>Please create an account to proceed. </p>
       </li>
       <!--step 1 end-->
 
@@ -67,7 +67,7 @@
       <li class="col-md-4 col-sm-4">
         <div class="iconcircle"><i class="fa fa-black-tie" aria-hidden="true"></i></div>
         <h4>Search Desired Job</h4>
-        <p></p>
+        <p>Now you may start to find the desired job your after.</p>
       </li>
       <!--step 2 end-->
 
@@ -75,7 +75,7 @@
       <li class="col-md-4 col-sm-4">
         <div class="iconcircle"><i class="fa fa-file-text" aria-hidden="true"></i></div>
         <h4>Send Your Resume</h4>
-        <p></p>
+        <p>Send your resume now to get the job in line.</p>
       </li>
       <!--step 3 end-->
     </ul>
