@@ -21,7 +21,7 @@
 <!-- search job starts -->
     <div class="searchwrap">
         <div class="container">
-            <h3>One million success stories. <span>Start yours today.</span></h3>
+            <h3>We will ensure to find the right path to your career.<span>Start yours today.</span></h3>
             <form>
                 <div class="searchbar row">
                     <div class="col-md-3">
