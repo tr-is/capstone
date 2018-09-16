@@ -1,8 +1,8 @@
 /*------------------------------------------
-Project Name : Jobs Portal
-Desgined By  : eCreative solutions
-Developed By : sharjeel;
-Date        :  09/Jan/17;
+Project Name : Right Jobs
+Desgined By  : Right jobs team
+Developed By : Right jobs team
+
 
 Table Of Index
 ------------------
@@ -1052,10 +1052,10 @@ a.wit-btn {
 	background: #333;
 	text-decoration: none;
 }
-
-.partTime{background:#f8a60c; color:#fff; font-size:13px; display:inline-block; padding:4px 6px;}
-.fulltime{background:#6ACA00; color:#fff; font-size:13px; display:inline-block; padding:4px 6px;}
-.freelance{background:#ff0000; color:#fff; font-size:13px; display:inline-block; padding:4px 6px;}
+/* home page salary colour  */
+.partTime{background:#e89041; color:#fff; font-size:13px; display:inline-block; padding:4px 6px;}
+.fulltime{background:#019d9b; color:#fff; font-size:13px; display:inline-block; padding:4px 6px;}
+.freelance{background:#2471a3e6; color:#fff; font-size:13px; display:inline-block; padding:4px 6px;}
 
 
 /************************************************
