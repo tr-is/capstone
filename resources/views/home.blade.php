@@ -7,6 +7,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="card">
+    <!-- jobs that are available shown for users -->
                         <div class="card-header">Available jobs</div>
 
                         <div class="card-body">
@@ -15,7 +16,7 @@
                                     {{ session('status') }}
                                 </div>
                             @endif
-
+    <!-- for each job the title of the job shown in the front page when user logs in -->
                             @if($jobs)
                                 <ul class="list-group">
                                     @foreach($jobs as $job)
@@ -24,7 +25,7 @@
                                                 {{ $job->title }}
                                             </a>
                                         </li>
-                                        
+
                                     @endforeach
                                 </ul>
                             @endif
