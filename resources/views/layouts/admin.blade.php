@@ -46,7 +46,7 @@
                             <img src="{{ asset('bundles/images/logo.png') }}" alt="" style="width: 150px;height: 50px">
                 </div>
             </span>
-            
+
         </a>
 
         <!-- Header Navbar: style can be found in header.less -->
@@ -99,7 +99,7 @@
     <!-- /.content-wrapper -->
 
     <footer class="main-footer">
-        <strong>Copyright &copy; {{ date('Y') }} <a href="{{ url('/') }}">LaraJobs</a>.</strong> All rights
+        <strong>Copyright &copy; {{ date('Y') }} <a href="{{ url('/') }}">RightJobs</a>.</strong> All rights
         reserved.
     </footer>
 
