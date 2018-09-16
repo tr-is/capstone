@@ -13,7 +13,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li>
-                        <a href="{{ route('admin.job.list') }}"><i class="fa fa-circle-o"></i> List</a>
+                        <a href="{{ route('admin.job.list') }}"><i class="fa fa-circle-o"></i> Current Jobs</a>
                     </li>
                     <li class="active">
                         <a href="{{ route('admin.job.create') }}"><i class="fa fa-circle-o"></i> Create</a>
