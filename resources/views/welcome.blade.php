@@ -55,6 +55,7 @@
     </div>
     <!-- title end -->
     <ul class="howlist row">
+          <!-- circle icons are shown through the steps-->
       <!--step 1-->
       <li class="col-md-4 col-sm-4">
         <div class="iconcircle"><i class="fa fa-user" aria-hidden="true"></i></div>
@@ -83,7 +84,7 @@
 </div>
 <!-- How it Works Ends -->
 
-<!-- Latest Jobs start -->
+<!-- Latest Jobs are listed down -->
 <div class="section greybg">
   <div class="container">
     <!-- title start -->
