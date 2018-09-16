@@ -21,7 +21,7 @@
                         <div class="col-sm">
                             <div class="popup-content">
                                 <h4>FOR EMPLOYER</h4>
-                                <a href="{{ route('admin.login') }}" class="btn btn-info">Login</a>
+                                <a href="{{ route('admin.login') }}" class="btn btn-primary">Login</a>
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                         <div class="col-sm">
                             <div class="popup-content">
                                 <h4>FOR EMPLOYER</h4>
-                                <a href="{{ route('admin.register.form') }}" class="btn btn-info">Register</a>
+                                <a href="{{ route('admin.register.form') }}" class="btn btn-primary">Register</a>
                             </div>
                         </div>
                     </div>
