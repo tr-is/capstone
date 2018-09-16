@@ -2248,13 +2248,13 @@ a:focus {
   background-color: #008d4c;
 }
 .btn-info {
-  background-color: #00c0ef;
-  border-color: #00acd6;
+  background-color: #01a4a2;   /*create button */
+  border-color: #01a4a2;
 }
 .btn-info:hover,
 .btn-info:active,
 .btn-info.hover {
-  background-color: #00acd6;
+  background-color: #01a4a2e3;
 }
 .btn-danger {
   background-color: #dd4b39;
