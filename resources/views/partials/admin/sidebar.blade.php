@@ -2,6 +2,7 @@
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
         <!-- sidebar menu: : style can be found in sidebar.less -->
+          <!-- employer side menu  -->
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">Menu</li>
             <li class="active treeview menu-open">
