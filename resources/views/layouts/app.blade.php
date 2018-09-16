@@ -18,7 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    
+
 <!-- Owl carousel -->
 <link href="{{ asset('public/bundles/css/owl.carousel.css') }}" rel="stylesheet">
 
@@ -44,7 +44,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                    <a class="navbar-brand" href="{{ url('/') }}"> 
+                    <a class="navbar-brand" href="{{ url('/') }}">
                         <div class="col-md-2 col-sm-3 col-xs-12">
                             <img src="{{ asset('bundles/images/logo.png') }}" alt="">
                         </div>
@@ -61,6 +61,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
                             @guest
+                              <!-- home page top nav bar -->
                                 <li class="dropdown"><a href="{{ url('/') }}">Home</a></li>
                                 <li class="postjob">
                                     <a href="#" data-toggle="modal" data-target="#loginModal">Login</a>
@@ -70,6 +71,7 @@
                                         Register
                                     </a>
                                 </li>
+                                  <!-- directs to the pages-->
                                 {{--<li class="nav-item">--}}
                                     {{--<a class="nav-link" href="{{ route('login') }}">{{ __('Job Seeker Login') }}</a>--}}
                                 {{--</li>--}}
@@ -103,7 +105,7 @@
                                 </li>
                             @endguest
                         </ul>
-                        
+
                     </div>
                 <div class="clearfix"></div>
             </div>
