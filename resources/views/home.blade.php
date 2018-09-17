@@ -22,6 +22,7 @@
                                <ul class="list-group">
                                     @foreach($jobs as $job)
                                         <li class="list-group-item">
+                                          <p>Profile Has Matched {{ $match }}% </p>
                                             <a href="{{ route('job.detail.frontend',['slug' => $job->slug]) }}">
                                                 {{ $job->title }}
                                             </a>
