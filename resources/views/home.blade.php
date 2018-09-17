@@ -24,8 +24,8 @@
 
                                         <li class="list-group-item">
 <!---->
-                                            <a href="{{ route('job.detail.frontend',['slug' => $job->slug]), 'job.user.apply',$job->id }}">
-                                                {{ $job->title }}    {{ $match }}%
+                                            <a href="{{ route('job.detail.frontend',['slug' => $job->slug])}}">
+                                                {{ $job->title }}
                                             </a>
                                             <br>
                                               <div class="jobloc"><label>$ {{ $job->salary_range}}</label> <br>  <span> {{ $job->job_location}} </span></div>
