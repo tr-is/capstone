@@ -63,7 +63,7 @@
                             @guest
                               <!-- home page top nav bar -->
                                 <li class="dropdown"><a href="{{ url('/') }}">Home</a></li>
-                                  <li class=""><a href="">About US</a></li>
+                                  <li class="aboutus"><a href="">About US</a></li>
                                 <li class="postjob">
                                     <a href="#" data-toggle="modal" data-target="#loginModal">Login</a>
                                 </li>

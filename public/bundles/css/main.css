@@ -415,7 +415,7 @@ h6 {
 	text-transform: uppercase;
 	font-weight: 600;
 	padding: 16px 0;
-	border-bottom: 2px solid #fff;
+	/*border-bottom: 2px solid #fff; */
 }
 
 
@@ -424,7 +424,7 @@ h6 {
 	background: none;
 }
 .navbar-nav>li>a:hover, .navbar-nav>li:hover>a, .navbar-nav>li.active>a {
-	border-bottom-color: #263bd6;
+/*	border-bottom-color: #263bd6; */
 }
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
 	background-color: #fff;
@@ -459,13 +459,19 @@ h6 {
 	padding:0px 4px;
 	/* border-bottom-color: #263bd6; */
 }
+.navbar-nav li.aboutus a {
+	/* background: #263bd6; */
+	/* color: #fff; */
+	padding:0px 4px;
+	/* border-bottom-color: #263bd6; */
+}
 .navbar-nav li.jobseeker a {
 	/* background: #666; */
 	/* color: #fff; */
 	padding:16px 15px;
 	/* border-bottom-color: #666; */
 }
-.navbar-nav li a.postjob:hover, .navbar-nav li a.jobseeker:hover {
+.navbar-nav li a.postjob:hover, .navbar-nav li a.jobseeker:hover .navbar-nav li a.aboutus:hover {
 	text-decoration: none;
 	color: #fff;
 	background: #000;
