@@ -27,14 +27,18 @@
                                                 {{ $job->title }}
                                             </a>
                                             <br>
-                                              <div class="jobloc"><label class="fulltime">$ {{ $job->salary_range}}</label> <br>  <span> {{ $job->job_location}} </span></div>
+                                              <div class="jobloc"><label>$ {{ $job->salary_range}}</label> <br>  <span> {{ $job->job_location}} </span></div>
 
                                         </li>
-                                    
+
                                     @endforeach
                                 </ul>
                             @endif
-
+                            <div class="col-md-4">
+                               <label class="label label-info">
+                                   <button class="btn btn-success"> Your Profile Has Matched {{ $match }}%</button>
+                               </label>
+                            </div>
 
                         </div>
                     </div>
