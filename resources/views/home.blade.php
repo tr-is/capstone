@@ -22,11 +22,12 @@
                                <ul class="list-group">
                                     @foreach($jobs as $job)
                                         <li class="list-group-item">
-<!--{{ $job->job_location}}-->
+<!---->
                                             <a href="{{ route('job.detail.frontend',['slug' => $job->slug]) }}">
-
+                                                {{ $job->title }}
                                             </a>
-                                              <div class="jobloc"><label class="fulltime">$ {{ $job->salary_range}}</label>   <span> {{ $job->title }} </span></div>
+                                            <br>
+                                              <div class="jobloc"><label class="fulltime">$ {{ $job->salary_range}}</label> <br>  <span> {{ $job->job_location}} </span></div>
 
                                         </li>
                                     
