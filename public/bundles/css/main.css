@@ -425,6 +425,7 @@ h6 {
 }
 .navbar-nav>li>a:hover, .navbar-nav>li:hover>a, .navbar-nav>li.active>a {
 /*	border-bottom-color: #263bd6; */
+color:#263bd6;
 }
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
 	background-color: #fff;
