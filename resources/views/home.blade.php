@@ -34,12 +34,7 @@
                                     @endforeach
                                 </ul>
                             @endif
-                            <div class="col-md-4">
-                               <label class="label label-info">
-                                   <button class="btn btn-success"> Your Profile Has Matched {{ $match }}%</button>
-                               </label>
-                            </div>
-
+                        
                         </div>
                     </div>
                 </div>
