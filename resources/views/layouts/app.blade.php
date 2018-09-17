@@ -46,7 +46,8 @@
             <div class="container">
                     <a class="navbar-brand" href="{{ url('/') }}">
                         <div class="col-md-2 col-sm-3 col-xs-12">
-                            <img style="width:200%;" src="{{ asset('bundles/images/logo.png') }}" alt="">
+                          <div class="navimg">  </div>
+                            <img  src="{{ asset('bundles/images/logo.png') }}" alt="">
                         </div>
                     </a>
                     <button class="navbar-toggler"
