@@ -27,7 +27,7 @@ Auth::routes();
 Route::get('/home', 'UserController@home')->name('home');
 Route::any('/profile/update', 'UserController@update')->name('user.profile.update');
 Route::get('/job/{slug}/detail', 'HomeController@jobDetail')->name('job.detail.frontend');
-route::get('/about','UserController@about' )->name('about');
+
 
 Route::prefix('employer')->group(function() {
     Route::get('/register', 'Auth\AdminRegisterController@showRegistrationForm')->name('admin.register.form');
