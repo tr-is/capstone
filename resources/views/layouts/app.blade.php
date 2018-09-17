@@ -63,7 +63,7 @@
                             @guest
                               <!-- home page top nav bar -->
                                 <li class="dropdown"><a href="{{ url('/') }}">Home</a></li>
-                                  <li class="aboutus"><a href="#">About</a></li>
+                                  <li class="aboutus"><a href="{{ route('about') }}">About</a></li>
                                 <li class="postjob">
                                     <a href="#" data-toggle="modal" data-target="#loginModal">Login</a>
                                 </li>
@@ -77,9 +77,7 @@
                                     {{--<a class="nav-link" href="{{ route('login') }}">{{ __('Job Seeker Login') }}</a>--}}
                                 {{--</li>--}}
 
-                                {{--<li class="nav-item">--}}
-                                    {{--<a class="nav-link" href="{{ route('about') }}">{{ __('About') }}</a>--}}
-                                            {{--</li>--}}
+                              
                                 {{--<li class="nav-item">--}}
                                     {{--<a class="nav-link" href="{{ route('register') }}">{{ __('Job Seeker Register') }}</a>--}}
                                 {{--</li>--}}
