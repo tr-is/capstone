@@ -23,9 +23,9 @@
                                     @foreach($jobs as $job)
 
                                         <li class="list-group-item">
-<!---->                                     <div>  {{ $match }}%</div>
-                                            <a href="{{ route('job.detail.frontend',['slug' => $job->slug]) }}">
-                                                {{ $job->title }}
+<!---->
+                                            <a href="{{ route('job.detail.frontend',['slug' => $job->slug]), 'job.user.apply',$job->id }}">
+                                                {{ $job->title }}    {{ $match }}%
                                             </a>
                                             <br>
                                               <div class="jobloc"><label>$ {{ $job->salary_range}}</label> <br>  <span> {{ $job->job_location}} </span></div>
