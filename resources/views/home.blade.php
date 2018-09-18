@@ -12,7 +12,7 @@
                       <!--card */-->
     <!-- jobs that are available shown for users -->
                         <div style="
-    width: 1100px; font-size: x-large; text-align: center; color: rgb(15, 95, 175); font-weight: 900;">Available jobs</div>
+    width: 1000px; font-size: x-large; text-align: center; color: rgb(15, 95, 175); font-weight: 900;">Available jobs</div>
 
                         <div style="width: 1100px; padding: 1.25rem; flex: 1 1 auto;">
                             @if (session('status'))
@@ -24,7 +24,7 @@
                             @if($jobs)
 
                                <ul style="display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;flex-direction: column;
-                               padding-left: 10px;margin-bottom: 0px;background-color: aliceblue;-webkit-margin-before: 1em;-webkit-margin-after: 1em;-webkit-margin-start: 0px;-webkit-margin-end: 0px;-webkit-padding-start: 40px;display: list-item;text-align: -webkit-match-parent;height: 899px;
+                               padding-left: 10px;margin-bottom: 0px;background-color: aliceblue;-webkit-margin-before: 1em;-webkit-margin-after: 1em;-webkit-margin-start: 0px;-webkit-margin-end: 0px;-webkit-padding-start: 40px;display: list-item;text-align: -webkit-match-parent;
                                padding-right: 30px;padding-bottom: 20px;padding-top: 20px; width: 850px;">
                                     @foreach($jobs as $job)
 
@@ -36,7 +36,7 @@
                                                 {{ $job->title }}
                                             </a> </div>
                                             <br>
-                                              <div class="jobloc"><label>$ {{ $job->salary_range}}</label> <br>  <span> {{ $job->job_location}} </span></div>
+                                              <div class="jobloc"style="color:grey"><label style="color:grey">$ {{ $job->salary_range}}</label> <br>  <span> {{ $job->job_location}} </span></div>
 
                                         </li>
 
