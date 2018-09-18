@@ -2,7 +2,7 @@
 @section('styles')
 @section('content')
     <section class="jobs-category-section" style="height: 100vh; background-color:#008b8b;">
-        <div style="position:relative; display:block; padding:1rem 1rem; margin-bottom:-2px;     border: 2px solid rgb(27, 197, 197);
+        <div style="position:relative; display:block; padding:1rem 1rem; margin-bottom:-2px;max-width: 960px;border: 2px solid rgb(27, 197, 197);
     background-color: aliceblue;">
 
             <div style="-webkit-box-pack: center!important; justify-content: center!important;    position: relative;
