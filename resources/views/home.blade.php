@@ -8,7 +8,8 @@
                 <div class="col-md-8">
                     <div class="card">
     <!-- jobs that are available shown for users -->
-                        <div class="card-header">Available jobs</div>
+                        <div class="card-header" style="
+    width: 1100px;">Available jobs</div>
 
                         <div class="card-body">
                             @if (session('status'))
