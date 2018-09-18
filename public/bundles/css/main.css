@@ -405,6 +405,8 @@ h6 {
 }
 .navbar {
 	background: none;
+	height: 70px;
+	width: 100%
 }
 .navbar-collapse {
 	padding: 0;
