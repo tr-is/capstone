@@ -37,8 +37,10 @@
 <!---->             <div style="font-size: x-large">
 
                         <a  href="{{ route('job.detail.frontend',['slug' => $job->slug])}}">
-                            {{ $job->title }}          {{ $match }}%
-                        </a> </div>
+                            {{ $job->title }}
+                        </a> <label>   {{ $match }}% </label>
+                        
+                       </div>
                         <br>
                           <div class="jobloc"style="color:grey"><label style="color:grey">$ {{ $job->salary_range}}</label> <br>  <span> {{ $job->job_location}} </span></div>
                     </li>
@@ -46,7 +48,7 @@
                 @endforeach
             </ul>
         @endif
-  
+
 
         @else
             <label class="label label-info"><button class="btn btn-success"> Please Login to Apply</button></label>
