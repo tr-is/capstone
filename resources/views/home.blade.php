@@ -1,12 +1,12 @@
 @extends('layouts.app')
 @section('styles')
 @section('content')
-    <section class="jobs-category-section" style="height: 1009px;background-color: rgb(0, 139, 139);">
+    <section class="jobs-category-section" style="height: 1200px;background-color: rgb(0, 139, 139);">
         <div style="position: relative;display: block;padding: 1rem;margin-bottom: -2;
         border: 2px solid rgb(27, 197, 197);background-color: aliceblue;left: auto;width: 960px;
-        margin-right: auto;margin-left: auto;max-width: 960px;">
+        margin-right: auto;margin-left: auto;max-width: 960px; height: 1164px">
 
-            <div style="-webkit-box-pack: center !important;justify-content: center !important;position: relative;display: block;padding: 1rem;margin-bottom: -2px;background-color: rgb(240, 248, 255);left: 0px;right: 0px;width: 954px;height: 975px;flex-wrap: wrap;margin-right: -15px;margin-left: -15px;">
+            <div style="-webkit-box-pack: center !important;justify-content: center !important;position: relative;display: block;padding: 1rem; width: 954px;flex-wrap: wrap;margin-right: -15px;margin-left: -15px;">
                 <div class="col-md-8">
                     <div >
                       <!--card */-->
