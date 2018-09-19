@@ -25,7 +25,7 @@ class UserController extends Controller
     public function home()
     {
         $jobs = Job::take(10)->get();
-        return view('home', compact('jobs'));
+        return view('home', compact('jobs','matchs'));
     }
 
     public function update(Request $request){
@@ -41,6 +41,30 @@ class UserController extends Controller
         }   else    {
             return view('user.update', compact('user'));
         }
+    }
+
+    /**
+     * @param $jobs
+     * @param $user
+     * @param $matchs
+     * @return array
+     */
+    public function matchJobsPercentage($jobs, $user)
+    {
+        $matchs = [];
+        foreach ($jobs as $job) {
+            $categories = $job->job_location . " " . $job->specification . " " . $job->education_description . " " . $job->title . " " . $job->description . " " . $job->education_description . " " . $job->type . " " . $job->salary_range;
+            $categories = strtolower(str_replace(',', ' ', strip_tags($categories)));
+
+            if ($user instanceof User) {
+                $scriptPath = public_path('/matching.py');
+                $userCategories = $user->categories . " " . $user->address . " " . $user->skills . " " . $user->education . " " . $user->expected_salary . " " . $user->experience . " " . $user->field_of_experience . " " . $user->preferred_location;
+                $userCategories = strtolower(str_replace(',', ' ', strip_tags($userCategories)));
+                $command = escapeshellcmd("/usr/bin/python {$scriptPath} '{$categories}' '{$userCategories}'");
+                $matchs[] = round(doubleval(shell_exec($command)) * 100, 2);
+            }
+        }
+        return $matchs;
     }
 
 }
