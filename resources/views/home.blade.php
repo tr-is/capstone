@@ -17,7 +17,7 @@
                             @endif
 
                             <ul class="jobslist row">
-                                @foreach($jobs as $job)
+                                @foreach($jobs->reverse() as $job)
                                 <li class="col-md-4 col-sm-6">
                                     <div class="jobint">
                                         <div class="row">
