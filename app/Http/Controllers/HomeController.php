@@ -44,7 +44,7 @@ class HomeController extends Controller
             $match = round(doubleval(shell_exec($command)) * 100,2);
         }
 
-        return view('job-detail',compact('job', 'match'));
+        return view('job-detail',compact('job','match'));
     }
 
     public function userDetail(User $user){
