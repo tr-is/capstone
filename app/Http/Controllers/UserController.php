@@ -24,7 +24,7 @@ class UserController extends Controller
      */
     public function home()
     {
-        $jobs = Job::take(10)->get();
+        $jobs = Job::take(200)->get();
         return view('home', compact('jobs','matchs'));
     }
 
