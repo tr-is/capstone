@@ -29,7 +29,7 @@
                                     @foreach($jobs as $job)
 
                                         <li style="padding: 1rem;margin-bottom: -2px;border: 2px solid rgb(27, 197, 197);
-                                        background-color: aliceblue;font-size:large;font-weight: 400; height:975px">
+                                        background-color: aliceblue;font-size:large;font-weight: 400; ">
 <!---->             <div style="font-size: x-large">
 
                                             <a  href="{{ route('job.detail.frontend',['slug' => $job->slug])}}">
