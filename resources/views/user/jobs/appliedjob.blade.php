@@ -10,13 +10,18 @@
                     <th>List of job applied</th>
                 </tr>
                 </thead>
+                <ul class="list-group">
                 @foreach($jobs as $job)
                 <tbody>
                    <td>
-                        <li><a href="{{ route('job.detail.frontend',['slug' => $job->slug]) }}">{{ $job->title }}</a></li>
+                        <li class="list-group-item">
+                            <a href="{{ route('job.detail.frontend',['slug' => $job->slug]) }}">{{ $job->title }}</a>
+                        </li>     
                     </td>
                 </tbody>
+                </ul>
                 @endforeach
+
             </table>
               
     </div>
