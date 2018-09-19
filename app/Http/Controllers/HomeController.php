@@ -19,7 +19,7 @@ class HomeController extends Controller
             $jobs = Job::with('admin')->where('title','like',"%{$query}%")->take(10)->get();
 
         }   else    {
-            $jobs = Job::with('admin')->take(10)->get();
+            $jobs = Job::with('admin')->take(200)->get();
         }
         
         return view('welcome')->withJobs($jobs)->withAdmins($admins);
