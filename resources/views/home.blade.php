@@ -21,28 +21,39 @@
                                 </div>
                             @endif
     <!-- for each job the title of the job shown in the front page when user logs in -->
-                            @if($jobs)
 
-                               <ul style="display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;flex-direction: column;
-                               padding-left: 10px;margin-bottom: 0px;background-color: aliceblue;-webkit-margin-before: 1em;-webkit-margin-after: 1em;-webkit-margin-start: 0px;-webkit-margin-end: 0px;-webkit-padding-start: 40px;display: list-item;text-align: -webkit-match-parent;
-                               padding-right: 30px;padding-bottom: 20px;padding-top: 20px; width: 850px;">
 
-                                    @foreach($jobs as $job)
+        @if(Auth::User())
+        @if($jobs)
 
-                                        <li style="padding: 1rem;margin-bottom: -2px;border: 2px solid rgb(27, 197, 197);
-                                        background-color: aliceblue;font-size:large;font-weight: 400; ">
+           <ul style="display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;flex-direction: column;
+           padding-left: 10px;margin-bottom: 0px;background-color: aliceblue;-webkit-margin-before: 1em;-webkit-margin-after: 1em;-webkit-margin-start: 0px;-webkit-margin-end: 0px;-webkit-padding-start: 40px;display: list-item;text-align: -webkit-match-parent;
+           padding-right: 30px;padding-bottom: 20px;padding-top: 20px; width: 850px;">
+
+                @foreach($jobs as $job)
+
+                    <li style="padding: 1rem;margin-bottom: -2px;border: 2px solid rgb(27, 197, 197);
+                    background-color: aliceblue;font-size:large;font-weight: 400; ">
 <!---->             <div style="font-size: x-large">
 
-                                            <a  href="{{ route('job.detail.frontend',['slug' => $job->slug])}}">
-                                                {{ $job->title }}   
-                                            </a> </div>
-                                            <br>
-                                              <div class="jobloc"style="color:grey"><label style="color:grey">$ {{ $job->salary_range}}</label> <br>  <span> {{ $job->job_location}} </span></div>
-                                        </li>
+                        <a  href="{{ route('job.detail.frontend',['slug' => $job->slug])}}">
+                            {{ $job->title }}          {{ $match }}%
+                        </a> </div>
+                        <br>
+                          <div class="jobloc"style="color:grey"><label style="color:grey">$ {{ $job->salary_range}}</label> <br>  <span> {{ $job->job_location}} </span></div>
+                    </li>
 
-                                    @endforeach
-                                </ul>
-                            @endif
+                @endforeach
+            </ul>
+        @endif
+  
+
+        @else
+            <label class="label label-info"><button class="btn btn-success"> Please Login to Apply</button></label>
+        @endif
+    </div>
+    </div>
+
 
                         </div>
                     </div>

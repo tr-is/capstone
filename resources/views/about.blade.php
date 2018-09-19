@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h2 class="uppercase mb8">About Us</h2>
+                <h2 class="uppercase mb8">About</h2>
             </div>
         </div>
         <!--end of row-->
@@ -30,7 +30,7 @@ Hired was founded in 2018 and is headquartered in Melbourne, The company is back
 </p>
 		    <!-- <h2 class="classic">The Encounter Team</h2> -->
             <br><br>
-            
+
 <!--             http://www.1001fonts.com/rhesmanisa-font.html
  -->		  </div>
 		</div>
