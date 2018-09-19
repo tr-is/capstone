@@ -10,7 +10,7 @@
         <!-- Horizontal Form -->
         <div class="box box-info">
             <div class="box-header with-border">
-                <h3 class="box-title">Jobs Create Form</h3>
+                <h3 class="box-title">Jobs {{isset($model) ? "Update" : "Create" }} Form</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
@@ -123,7 +123,7 @@
                 <!-- /.box-body -->
                 <div class="box-footer">
                     {{--<button type="reset" class="btn btn-default pull-right">Cancel</button>--}}
-                    <button type="submit" class="btn btn-info pull-right">Create</button>
+                    <button type="submit" class="btn btn-info pull-right">{{isset($model) ? "update" : "create" }}</button>
                 </div>
                 <!-- /.box-footer -->
             </form>
