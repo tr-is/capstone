@@ -98,7 +98,7 @@
       @foreach($jobs->reverse() as $job)
       <li class="col-md-4 col-sm-6">
 
-        <div class="jobint">
+        <div class="welcomejob">
 
 
           <div class="row">
