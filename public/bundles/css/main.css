@@ -1070,9 +1070,9 @@ border-bottom: 2px solid #39a398;
 	background: #333;
 	text-decoration: none;
 }
-/* home page salary colour  */
+/* home page salary colour  background:#019d9b;*/
 .partTime{background:#e89041; color:#fff; font-size:13px; display:inline-block; padding:4px 6px;}
-.fulltime{background:#019d9b; color:#fff; font-size:13px; display:inline-block; padding:4px 6px;}
+.fulltime{ color:darkg; font-size:13px; display:inline-block; padding:4px 6px;}
 .freelance{background:#2471a3e6; color:#fff; font-size:13px; display:inline-block; padding:4px 6px;}
 
 
