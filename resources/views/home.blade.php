@@ -27,7 +27,7 @@
                                                 <div class="jobloc">
                                                     <label style="color: darkgray; font-size: 13px; display: inline-block;">$ {{ $job->salary_range}}</label>
                                                     <br>
-                                                    <label style="font-size: x-large; color: #ffb72f;" ><span>Job Match: {{ $job->match  }}</span></label>
+                                                    <label style="font-size: x-large; color: #de7b12;" ><span>Job Match: {{ $job->match  }}</span></label>
                                                 </div>
                                             </div>
                                         </div>
