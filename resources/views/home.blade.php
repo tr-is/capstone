@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="jobs-category-section" style="height: 100vh;">
+    <section class="jobs-category-section" style="height: 100%; background-color:#0ca2a0">
         <div class="container">
 
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <div class="card">
-                        <div class="card-header">Available jobs</div>
+                    <div class="card" style="background-color:#f0f8ff">
+                        <div class="card-header" style="color:darkblue; font-size: 600;">Available jobs</div>
 
                         <div class="card-body">
                             @if (session('status'))
@@ -26,7 +26,7 @@
                                                 <div class="company">{{ $job->admin ? $job->admin->name : '' }}</div>
                                                 <div class="jobloc">
                                                     <label class="fulltime">$ {{ $job->salary_range}}</label>
-                                                    <label><span>Job Match: {{ $job->match  }}</span></label>
+                                                    <label style="color:darkblue weight:600" ><span>Job Match: {{ $job->match  }}</span></label>
                                                 </div>
                                             </div>
                                         </div>
