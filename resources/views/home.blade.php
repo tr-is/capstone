@@ -16,10 +16,10 @@
                                 </div>
                             @endif
 
-                            <ul class="jobslist col" style="width:300%">
+                            <ul class="jobslist col">
                                 @foreach($jobs->reverse() as $job)
                                 <li class="col-md-4 col-sm-6">
-                                    <div class="jobint">
+                                    <div class="jobint" style="width:330%">
                                         <div class="row">
                                             <div class="col-md-12 col-sm-12">
                                                 <h4><a href="{{ route('job.detail.frontend',['slug' => $job->slug]) }}">{{$job->title}}</a></h4>
@@ -28,7 +28,7 @@
                                                     <label style="color: darkgray; font-size: 13px; display: inline-block;">$ {{ $job->salary_range}}</label>
                                                     <br>
                                                   </br>
-                                                    <label style="font-size: x-large; color:orange;" ><span>Job Match: {{ $job->match  }}</span></label>
+                                                    <label style="font-size: x-large; color:#d2691e;" ><span>Job Match: {{ $job->match  }}</span></label>
                                                 </div>
                                             </div>
                                         </div>

@@ -1001,9 +1001,10 @@ a.wit-btn {
 	margin-top: 30px;
 }
 .jobslist li .jobint {
-	background: #fff;
-	padding: 15px;
-	border: 1px solid #e3e3e3;
+	background: #f0f8ff;
+	padding: 10px;
+/*border: 1px solid #39a398; */
+border-bottom: 2px solid #39a398;
 	transition: 0.4s ease-in-out;
 	-webkit-transition: 0.4s ease-in-out;
 	-ms-transition: 0.4s ease-in-out;
