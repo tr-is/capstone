@@ -16,7 +16,7 @@
                                 </div>
                             @endif
 
-                            <ul class="jobslist row">
+                            <ul class="jobslist col" style="width:300%">
                                 @foreach($jobs->reverse() as $job)
                                 <li class="col-md-4 col-sm-6">
                                     <div class="jobint">
@@ -27,7 +27,8 @@
                                                 <div class="jobloc">
                                                     <label style="color: darkgray; font-size: 13px; display: inline-block;">$ {{ $job->salary_range}}</label>
                                                     <br>
-                                                    <label style="font-size: x-large; color: #de7b12;" ><span>Job Match: {{ $job->match  }}</span></label>
+                                                  </br>
+                                                    <label style="font-size: x-large; color:orange;" ><span>Job Match: {{ $job->match  }}</span></label>
                                                 </div>
                                             </div>
                                         </div>
