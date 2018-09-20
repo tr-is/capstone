@@ -1010,6 +1010,15 @@ border-bottom: 2px solid #39a398;
 	-ms-transition: 0.4s ease-in-out;
 	-moz-transition: 0.4s ease-in-out;
 }
+.jobslist li .welcomejob {
+	background: #fff;
+	padding: 10px;
+border: 1px solid ##e3e3e3;
+	transition: 0.4s ease-in-out;
+	-webkit-transition: 0.4s ease-in-out;
+	-ms-transition: 0.4s ease-in-out;
+	-moz-transition: 0.4s ease-in-out;
+}
 .jobslist li .jobint:hover {
 	box-shadow: 0 0 20px rgba(0,0,0,0.1);
 	border-color: #263bd6
