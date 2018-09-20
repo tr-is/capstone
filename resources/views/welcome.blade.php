@@ -105,7 +105,9 @@
                 <div class="col-md-12 col-sm-12">
                   <h4><a href="{{ route('job.detail.frontend',['slug' => $job->slug]) }}">{{ $job->title }}</a></h4>
                   <div class="company">{{ $job->admin ? $job->admin->name : '' }}</div>
-                  <div class="jobloc"><label class="fulltime">$ {{ $job->salary_range}}</label>   <span>{{ $job->job_location}}</span></div>
+                  <div class="jobloc"><label class="fulltime">$ {{ $job->salary_range}}</label> <br>
+
+                      <label>{{ $job->job_location}}</label></div>
                 </div>
 
           </div>
