@@ -28,7 +28,7 @@
                                                     <label style="color: darkgray; font-size: 13px; display: inline-block;">$ {{ $job->salary_range}}</label>
                                                     <br>
                                                   </br>
-                                                    <label style="font-size: x-large; color:orange;" ><span>Job Match: {{ $job->match  }}</span></label>
+                                                    <label><span>Job Match: {{ $job->match  }}</span></label>
                                                 </div>
                                             </div>
                                         </div>

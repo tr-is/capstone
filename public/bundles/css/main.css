@@ -1037,7 +1037,8 @@ border-bottom: 2px solid #39a398;
 	color: #000;
 }
 .jobslist li .jobloc span {
-	color: orange;
+	color: #e39b13;
+	font-size: x-large;
 }
 .jobslist li .applybtn {
 	background: #fff;
