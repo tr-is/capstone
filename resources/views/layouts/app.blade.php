@@ -116,7 +116,7 @@
                 <div class="clearfix"></div>
             </div>
         </nav>
-        <main>
+        <main style="background-color:rgb(12, 162, 160);">
             @yield('content')
         </main>
     </div>
@@ -124,7 +124,8 @@
 </body>
 <footer>
     <div class="copyright">
-        <div class="container">
+    
+        <div class="container" style="height: 100%; background-color: rgb(12, 162, 160);">
             <div class="bttxt">Copyright © 2018 . All Rights Reserved. </div>
         </div>
 </div>
