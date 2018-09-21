@@ -5,7 +5,7 @@
         <div class="container">
 
             <div class="row justify-content-center">
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <div class="card" style="background-color:#f0f8ff">
                         <div class="card-header" style="color: darkblue;  text-align: center; font-weight: 700; font-size: xx-large;">Match jobs</div>
 
