@@ -1,20 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
- <section>
+<section style="height: 100%; background-color:#0ca2a0">
     <div >
 
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <h2 class="uppercase mb8">About</h2>
+            <div class="col-md-6">;
+                <h2 class="uppercase mb8" style=" color: white; text-align: center;">About US</h2>
             </div>
         </div>
         <!--end of row-->
     </div>
     <!--end of container-->
-</section>
+
 
 <section  id="about" >
 	<div class="container text-center">
@@ -37,6 +37,6 @@ Hired was founded in 2018 and is headquartered in Melbourne, The company is back
 	</div>
 </section>
 
-
+</section>
 
 @endsection
