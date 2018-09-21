@@ -122,7 +122,7 @@
 </div>
 <!-- Latest Jobs ends -->
 <!-- Top Employers start -->
-<div class="section greybg">
+<div class="section sponser">
   <div class="container">
     <!-- title start -->
     <div class="titleTop">
