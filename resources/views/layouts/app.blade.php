@@ -116,7 +116,7 @@
                 <div class="clearfix"></div>
             </div>
         </nav>
-        <main style="background-color:rgb(12, 162, 160);">
+        <main>
             @yield('content')
         </main>
     </div>
