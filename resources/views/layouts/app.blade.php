@@ -124,7 +124,8 @@
 </body>
 <footer>
     <div class="copyright">
-        <div class="container">
+    
+        <div class="container" >
             <div class="bttxt">Copyright © 2018 . All Rights Reserved. </div>
         </div>
 </div>
