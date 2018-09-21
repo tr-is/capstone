@@ -51,6 +51,6 @@ Route::prefix('employer')->group(function() {
      * Admin Job matching route
      */
     Route::get('/job/{job}/match', 'Admin\JobController@matchJob')->name('admin.job.match');
-    Route::get('/about','HomeController@about');
+    Route::get('/about','HomeController@about')->name('about');
 
 });
