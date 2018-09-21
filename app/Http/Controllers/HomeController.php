@@ -21,7 +21,7 @@ class HomeController extends Controller
         }   else    {
             $jobs = Job::with('admin')->take(200)->get();
         }
-        
+
         return view('welcome')->withJobs($jobs)->withAdmins($admins);
     }
 
@@ -39,7 +39,7 @@ class HomeController extends Controller
         if($user instanceof User){
             $scriptPath = public_path('/matching.py');
             $userCategories =  $user->categories." ". $user->address . " ". $user->skills . " ". $user->education . " ". $user->expected_salary ." ". $user->experience. " ". $user->field_of_experience. " ". $user->preferred_location;
-            $userCategories = strtolower(str_replace(',',' ', strip_tags($userCategories))); 
+            $userCategories = strtolower(str_replace(',',' ', strip_tags($userCategories)));
             $command = escapeshellcmd("/usr/bin/python {$scriptPath} '{$categories}' '{$userCategories}'");
             $match = round(doubleval(shell_exec($command)) * 100,2);
         }
@@ -61,7 +61,7 @@ class HomeController extends Controller
             if(! $hasApplied){
                 $user->jobs()->attach($job->id);
             } else  {
-                return redirect()->back()->with('error','Already applied.');       
+                return redirect()->back()->with('error','Already applied.');
             }
         }   catch(\Exception $e){
             dd($e->getMessage());
@@ -72,8 +72,12 @@ class HomeController extends Controller
     public function listAppliedJobs(){
 
         $jobs = Auth::user()->jobs()->get();
-        
+
         return view('user.jobs.appliedjob', compact('jobs'));
+    }
+
+    public function about(){
+      return view('about');
     }
 
 }
