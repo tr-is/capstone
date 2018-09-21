@@ -119,6 +119,9 @@ select{
 .greybg {
 	background: #f6f6f6;
 }
+.sponser{
+	background:white;
+}
 /*Section Title*/
 .titleTop {
 	text-align: center;
