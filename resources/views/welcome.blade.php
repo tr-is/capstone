@@ -122,7 +122,7 @@
 </div>
 <!-- Latest Jobs ends -->
 <!-- Top Employers start -->
-<div class="section sponser">
+<div class="section sponse">
   <div class="container">
     <!-- title start -->
     <div class="titleTop">
@@ -149,11 +149,11 @@
       <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="#"><img src="{{ asset('bundles/images/emplogo9.jpg') }}" alt="Company Name"></a></li>
 
       <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="#"><img src="{{ asset('bundles/images/emplogo10.jpg') }}" alt="Company Name"></a></li>
-  <!--employer---
+
       <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="#"><img src="{{ asset('bundles/images/emplogo11.jpg') }}" alt="Company Name"></a></li>
 
       <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="#"><img src="{{ asset('bundles/images/emplogo12.jpg') }}" alt="Company Name"></a></li>
-
+<!--employer---
       <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="#"><img src="{{ asset('bundles/images/emplogo13.jpg') }}" alt="Company Name"></a></li>
 
       <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="#"><img src="{{ asset('bundles/images/emplogo14.jpg') }}" alt="Company Name"></a></li>
