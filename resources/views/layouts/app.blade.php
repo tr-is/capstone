@@ -122,7 +122,8 @@
     </div>
     @include('partials.frontend.modals')
 </body>
-<footer class="fixed-bottom">
+<!--class="fixed-bottom" */-->
+<footer style="position:fixed;" >
     <div class="copyright">
 
         <div class="container" >

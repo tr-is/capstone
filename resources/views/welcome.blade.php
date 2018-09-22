@@ -105,7 +105,9 @@
                 <div class="col-md-12 col-sm-12">
                   <h4><a href="{{ route('job.detail.frontend',['slug' => $job->slug]) }}">{{ $job->title }}</a></h4>
                   <div class="company">{{ $job->admin ? $job->admin->name : '' }}</div>
-                  <div class="jobloc"><label class="fulltime">$ {{ $job->salary_range}}</label> <br>
+                  <div class="jobloc">
+
+                    <label class="fulltime">$ {{ $job->salary_range}}</label> <br>
 
                       <label>{{ $job->job_location}}</label></div>
                 </div>
@@ -122,7 +124,7 @@
 </div>
 <!-- Latest Jobs ends -->
 <!-- Top Employers start -->
-<div class="section sponse">
+<div class="section " style="background:white;">
   <div class="container">
     <!-- title start -->
     <div class="titleTop">

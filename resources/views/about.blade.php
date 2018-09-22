@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-<section style="height: 100%; background-color:#0ca2a0">
+<section >
     <div >
 
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-6">;
-                <h2 class="uppercase mb8" style=" color: white; text-align: center;">About US</h2>
+            <div >;
+                <h2 class="uppercase mb12" style=" color: white; text-align: center;">About US</h2>
             </div>
         </div>
         <!--end of row-->
