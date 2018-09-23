@@ -5,7 +5,7 @@
     <div >
 
     </div>
-    <div class="container">
+    <div class="container" style="background:#00afad;">
         <div class="row">
             <div >;
                 <h2 class="uppercase mb12" style=" color: white; text-align: center;">About US</h2>
@@ -20,7 +20,7 @@
 	<div class="container text-center">
 		<div class="row">
 		  <div >
-		    <h3>RIGHT JOB</h3>
+		    <h3 style="color:orange;">RIGHT JOB</h3>
 		    <p>RIGHT JOB is a marketplace that matches job with the world’s most innovative companies. RIGHR JOB combines intelligent job matching with unbiased career counselling to help people find a job they love.
 
 Through Right JOB, job candidates and companies have transparency into salary offers, competing opportunities and job details. Making the recruiting process quicker and more efficient than ever before.
