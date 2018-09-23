@@ -16,7 +16,7 @@
     <!--end of container-->
 
 
-<section  id="about" >
+<section  id="about"  style="padding-top: 60px;">
 	<div class="container text-center">
 		<div class="row">
 		  <div >
